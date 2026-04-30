@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Orchestrations Filter</title>
+</head>
+<body>
+
+    <div class="form-group">
+        <label for="Title">Title contains:</label>
+        <input type="text" name="Title" id="Title" class="form-control" ng-model="titleContains" ng-required="false" ng-minlength="1" ng-maxlength="100">
+    </div>
+    <div class="form-group">
+        <label for="complyr">Composer/Lyricist:</label>
+        <input type="text" name="complyr" id="complyr" class="form-control" ng-model="compLyrContains" ng-required="false" ng-minlength="1" ng-maxlength="100">
+    </div>
+    <div class="form-group">
+        <label for="arr">Arranger:</label>
+        <input type="text" name="arr" id="arr" class="form-control" ng-model="arrangerContains" ng-required="false" ng-minlength="1" ng-maxlength="100">
+    </div>
+    <div class="form-group">
+        <label for="pub">Publisher:</label>
+        <input type="text" name="pub" id="pub" class="form-control" ng-model="publisherContains" ng-required="false" ng-minlength="1" ng-maxlength="100">
+    </div>
+    <div class="form-group">
+        <label for="tityear">Title Year:</label>
+        <input type="text" name="tityear" id="tityear" class="form-control" ng-model="titleYearContains" ng-required="false" ng-minlength="1" ng-maxlength="100">
+    </div>
+    <div class="form-group">
+        <label for="arryear">Arrangement Year:</label>
+        <input type="text" name="arryear" id="arryear" class="form-control" ng-model="arrangeYearContains" ng-required="false" ng-minlength="1" ng-maxlength="100">
+    </div>
+    <div class="form-group">
+        <label for="arrtype">Arrangement Type:</label>
+        <input type="text" name="arrtype" id="arrtype" class="form-control" ng-model="arrangeTypeContains" ng-required="false" ng-minlength="1" ng-maxlength="100">
+    </div>
+    <div class="form-group">
+        <label for="key">Key:</label>
+        <input type="text" name="key" id="key" class="form-control" ng-model="keyContains" ng-required="false" ng-minlength="1" ng-maxlength="100">
+    </div>
+    <div class="form-group">
+        <label for="prodtype">Production Type:</label>
+        <input type="text" name="prodtype" id="prodtype" class="form-control" ng-model="prodTypeContains" ng-required="false" ng-minlength="1" ng-maxlength="100">
+    </div>
+    <div class="form-group">
+        <label for="prodtitle">Production Title:</label>
+        <input type="text" name="prodtitle" id="prodtitle" class="form-control" ng-model="prodTitleContains" ng-required="false" ng-minlength="1" ng-maxlength="100">
+    </div>
+    <div class="form-group">
+        <label for="id">Id:</label>
+        <input type="text" name="id" id="id" class="form-control" ng-model="idContains" ng-required="false" ng-minlength="1" ng-maxlength="100">
+    </div>
+    <div class="form-group">
+        <label for="id">Notes:</label>
+        <input type="text" name="notes" id="notes" class="form-control" ng-model="notesContains" ng-required="false" ng-minlength="1" ng-maxlength="100">
+    </div>
+    <div class="form-group">
+        <label for="platenum">Plate number:</label>
+        <input type="text" name="platenum" id="platenum" class="form-control" ng-model="plateNumContains" ng-required="false" ng-minlength="1" ng-maxlength="100">
+    </div>
+    <div class="form-group">
+        <label for="pubcatnum">Public catalog number:</label>
+        <input type="text" name="pubcatnum" id="pubcatnum" class="form-control" ng-model="pubCatNumContains" ng-required="false" ng-minlength="1" ng-maxlength="100">
+    </div>
+    <label>
+        Large: <input type="checkbox" ng-init="'NO'" ng-model="isLarge" ng-true-value="'YES'" ng-false-value="'NO'">
+    </label>
+
+
+</body>
+</html>

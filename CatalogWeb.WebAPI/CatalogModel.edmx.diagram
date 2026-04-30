@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ab373f16d5b446edb78969ceea3095ef" Name="Diagram1" ZoomLevel="89">
+        <EntityTypeShape EntityType="CatalogDbModel.Orchestration" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogDbModel.SheetMus" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="CatalogDbModel.C78" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CatalogDbModel.Book" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CatalogDbModel.FilmSongPerson" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="CatalogDbModel.Pianorol" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="CatalogDbModel.Prp" Width="1.5" PointX="7.75" PointY="5.75" />
+        <EntityTypeShape EntityType="CatalogDbModel.Silent" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CatalogDbModel.Solo" Width="1.5" PointX="9.75" PointY="7.75" />
+        <EntityTypeShape EntityType="CatalogDbModel.Track" Width="1.5" PointX="11.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

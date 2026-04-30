@@ -1,0 +1,1236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CatalogDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="78">
+          <Key>
+            <PropertyRef Name="ID_78" />
+          </Key>
+          <Property Name="TITLE" Type="nvarchar" MaxLength="110" />
+          <Property Name="CATNUM" Type="nvarchar" MaxLength="15" />
+          <Property Name="COMPOSERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="PUBLISHER" Type="nvarchar" MaxLength="100" />
+          <Property Name="COMPOSERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="PRODTYPE" Type="nvarchar" MaxLength="50" />
+          <Property Name="PRODTITLE" Type="nvarchar" MaxLength="60" />
+          <Property Name="ARRANGTYPE" Type="nvarchar" MaxLength="30" />
+          <Property Name="NOTES1" Type="nvarchar" MaxLength="150" />
+          <Property Name="NOTES2" Type="nvarchar" MaxLength="150" />
+          <Property Name="id_transfer" Type="int" />
+          <Property Name="PRINT" Type="bit" />
+          <Property Name="NewRec" Type="bit" />
+          <Property Name="PERFORMERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPANY" Type="nvarchar" MaxLength="100" />
+          <Property Name="PERFORMERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="ID_78" Type="int" Nullable="false" />
+          <Property Name="PERFORMERS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="PERFORMERS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="DONE" Type="nvarchar" MaxLength="100" />
+          <Property Name="MATRIX" Type="nvarchar" MaxLength="50" />
+          <Property Name="MATRIX_NUM" Type="nvarchar" MaxLength="50" />
+          <Property Name="MATRIX_PREFIX" Type="nvarchar" MaxLength="50" />
+          <Property Name="MATRIX_SUFFIX" Type="nvarchar" MaxLength="50" />
+          <Property Name="LOCATION" Type="nvarchar" MaxLength="100" />
+          <Property Name="PAGE_LINK" Type="nvarchar" MaxLength="100" />
+          <Property Name="RecDay" Type="nvarchar" MaxLength="2" />
+          <Property Name="RecMonth" Type="nvarchar" MaxLength="2" />
+          <Property Name="RecYear" Type="nvarchar" MaxLength="4" />
+          <Property Name="FLD1" Type="nvarchar" MaxLength="20" />
+          <Property Name="FLD2" Type="nvarchar" MaxLength="20" />
+          <Property Name="FLD3" Type="nvarchar" MaxLength="20" />
+          <Property Name="FLD4" Type="nvarchar" MaxLength="20" />
+          <Property Name="FLD5" Type="nvarchar" MaxLength="20" />
+          <Property Name="FLD6" Type="nvarchar" MaxLength="20" />
+          <Property Name="FLD7" Type="nvarchar" MaxLength="20" />
+          <Property Name="FLD8" Type="nvarchar" MaxLength="30" />
+          <Property Name="FLD1_DATA" Type="nvarchar" MaxLength="250" />
+          <Property Name="FLD2_DATA" Type="nvarchar" MaxLength="250" />
+          <Property Name="FLD3_DATA" Type="nvarchar" MaxLength="255" />
+          <Property Name="FLD4_DATA" Type="nvarchar" MaxLength="255" />
+          <Property Name="FLD5_DATA" Type="nvarchar" MaxLength="250" />
+          <Property Name="FLD6_DATA" Type="nvarchar" MaxLength="250" />
+          <Property Name="FLD7_DATA" Type="nvarchar" MaxLength="250" />
+          <Property Name="FLD8_DATA" Type="nvarchar" MaxLength="250" />
+          <Property Name="FLD_2_COUNT" Type="int" />
+          <Property Name="FLD_3_COUNT" Type="int" />
+          <Property Name="YEAR_SHEETMUS" Type="nvarchar" MaxLength="4" />
+          <Property Name="UCASE_FLD2_DATA" Type="nvarchar" MaxLength="250" />
+          <Property Name="PICTURE" Type="nvarchar" MaxLength="100" />
+          <Property Name="SEARCHBOX" Type="nvarchar" MaxLength="100" />
+          <Property Name="TOTAL_ROWS" Type="int" />
+          <Property Name="ROW_NUM" Type="int" />
+          <Property Name="SORT_BY" Type="nvarchar" MaxLength="50" />
+          <Property Name="YOUTUBE" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Books">
+          <Key>
+            <PropertyRef Name="ID_BOOKS" />
+          </Key>
+          <Property Name="TITLE" Type="nvarchar" MaxLength="110" />
+          <Property Name="CATNUM" Type="nvarchar" MaxLength="6" />
+          <Property Name="COMPOSERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="PUBLISHER" Type="nvarchar" MaxLength="50" />
+          <Property Name="TITLEYEAR" Type="nvarchar" MaxLength="4" />
+          <Property Name="SUBJECT" Type="nvarchar" MaxLength="70" />
+          <Property Name="KEYWORDS" Type="nvarchar" MaxLength="70" />
+          <Property Name="NOTES1" Type="nvarchar" MaxLength="150" />
+          <Property Name="NOTES2" Type="nvarchar" MaxLength="150" />
+          <Property Name="COMPOSERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="ID_BOOKS" Type="int" Nullable="false" />
+          <Property Name="PRINT" Type="bit" />
+          <Property Name="NewRec" Type="bit" />
+          <Property Name="SEARCHBOX" Type="nvarchar" MaxLength="100" />
+          <Property Name="TOTAL_ROWS" Type="int" />
+          <Property Name="ROW_NUM" Type="int" />
+          <Property Name="SORT_BY" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="FilmSongPerson">
+          <Key>
+            <PropertyRef Name="ID_FILMSONGPERSON" />
+          </Key>
+          <Property Name="FilmTitle" Type="nvarchar" MaxLength="200" />
+          <Property Name="FilmYear" Type="int" />
+          <Property Name="SongTitle" Type="nvarchar" MaxLength="200" />
+          <Property Name="Person" Type="nvarchar" MaxLength="120" />
+          <Property Name="Role" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_FILMSONGPERSON" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PICTURE" Type="nvarchar" MaxLength="100" />
+          <Property Name="SEARCHBOX" Type="nvarchar" MaxLength="100" />
+          <Property Name="TOTAL_ROWS" Type="int" />
+          <Property Name="ROW_NUM" Type="int" />
+          <Property Name="SORT_BY" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Orchestrations">
+          <Key>
+            <PropertyRef Name="ID_JAZZ" />
+          </Key>
+          <Property Name="TITLE" Type="nvarchar" MaxLength="110" />
+          <Property Name="CATNUM" Type="nvarchar" MaxLength="6" />
+          <Property Name="ARRANGERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="PUBLISHER" Type="nvarchar" MaxLength="100" />
+          <Property Name="COMPOSERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="ARRANGERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="TITLEYEAR" Type="nvarchar" MaxLength="4" />
+          <Property Name="ARRANGYEAR" Type="nvarchar" MaxLength="4" />
+          <Property Name="ARRANGTYPE" Type="nvarchar" MaxLength="30" />
+          <Property Name="KEY" Type="nvarchar" MaxLength="15" />
+          <Property Name="PRODTYPE" Type="nvarchar" MaxLength="50" />
+          <Property Name="PRODTITLE" Type="nvarchar" MaxLength="60" />
+          <Property Name="NOTES1" Type="nvarchar" MaxLength="150" />
+          <Property Name="NOTES2" Type="nvarchar" MaxLength="150" />
+          <Property Name="PLATE_NUMBER" Type="nvarchar" MaxLength="20" />
+          <Property Name="PRINT" Type="bit" />
+          <Property Name="ID_JAZZ" Type="int" Nullable="false" />
+          <Property Name="id_transfer" Type="int" />
+          <Property Name="LARGE" Type="bit" />
+          <Property Name="NewRec" Type="bit" />
+          <Property Name="PCN" Type="nvarchar" MaxLength="20" />
+          <Property Name="ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="PICTURE" Type="nvarchar" MaxLength="100" />
+          <Property Name="SEARCHBOX" Type="nvarchar" MaxLength="100" />
+          <Property Name="TOTAL_ROWS" Type="int" />
+          <Property Name="ROW_NUM" Type="int" />
+          <Property Name="SORT_BY" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Pianorol">
+          <Key>
+            <PropertyRef Name="ID_PIANOROL" />
+          </Key>
+          <Property Name="TITLE" Type="nvarchar" MaxLength="110" />
+          <Property Name="CATNUM" Type="nvarchar" MaxLength="6" />
+          <Property Name="COMPOSERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="PUBLISHER" Type="nvarchar" MaxLength="100" />
+          <Property Name="COMPOSERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="TITLEYEAR" Type="nvarchar" MaxLength="4" />
+          <Property Name="PRODTYPE" Type="nvarchar" MaxLength="50" />
+          <Property Name="PRODTITLE" Type="nvarchar" MaxLength="60" />
+          <Property Name="ARRANGTYPE" Type="nvarchar" MaxLength="30" />
+          <Property Name="NOTES1" Type="nvarchar" MaxLength="150" />
+          <Property Name="NOTES2" Type="nvarchar" MaxLength="150" />
+          <Property Name="id_transfer" Type="int" />
+          <Property Name="PRINT" Type="bit" />
+          <Property Name="NewRec" Type="bit" />
+          <Property Name="ARRANGYEAR" Type="nvarchar" MaxLength="4" />
+          <Property Name="MEDIACAT" Type="nvarchar" MaxLength="15" />
+          <Property Name="PERFORMERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPANY" Type="nvarchar" MaxLength="50" />
+          <Property Name="PERFORMERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="ID_PIANOROL" Type="int" Nullable="false" />
+          <Property Name="PICTURE" Type="nvarchar" MaxLength="100" />
+          <Property Name="SEARCHBOX" Type="nvarchar" MaxLength="100" />
+          <Property Name="TOTAL_ROWS" Type="int" />
+          <Property Name="ROW_NUM" Type="int" />
+          <Property Name="SORT_BY" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Prp">
+          <Key>
+            <PropertyRef Name="ID_PRP" />
+          </Key>
+          <Property Name="TITLE" Type="nvarchar" MaxLength="110" />
+          <Property Name="CATNUM" Type="nvarchar" MaxLength="6" />
+          <Property Name="COMPOSERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="PUBLISHER" Type="nvarchar" MaxLength="100" />
+          <Property Name="COMPOSERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="TITLEYEAR" Type="nvarchar" MaxLength="4" />
+          <Property Name="PRODTYPE" Type="nvarchar" MaxLength="50" />
+          <Property Name="PRODTITLE" Type="nvarchar" MaxLength="60" />
+          <Property Name="ARRANGTYPE" Type="nvarchar" MaxLength="30" />
+          <Property Name="NOTES1" Type="nvarchar" MaxLength="150" />
+          <Property Name="NOTES2" Type="nvarchar" MaxLength="150" />
+          <Property Name="id_transfer" Type="int" />
+          <Property Name="PRINT" Type="bit" />
+          <Property Name="NewRec" Type="bit" />
+          <Property Name="ARRANGYEAR" Type="nvarchar" MaxLength="4" />
+          <Property Name="MEDIACAT" Type="nvarchar" MaxLength="15" />
+          <Property Name="PERFORMERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPANY" Type="nvarchar" MaxLength="50" />
+          <Property Name="PERFORMERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="ID_PRP" Type="int" Nullable="false" />
+          <Property Name="PICTURE" Type="nvarchar" MaxLength="100" />
+          <Property Name="SEARCHBOX" Type="nvarchar" MaxLength="100" />
+          <Property Name="TOTAL_ROWS" Type="int" />
+          <Property Name="ROW_NUM" Type="int" />
+          <Property Name="SORT_BY" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SheetMus">
+          <Key>
+            <PropertyRef Name="ID_SHEETMUS" />
+          </Key>
+          <Property Name="TITLE" Type="nvarchar" MaxLength="110" />
+          <Property Name="CATNUM" Type="nvarchar" MaxLength="6" />
+          <Property Name="COMPOSERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="PUBLISHER" Type="nvarchar" MaxLength="100" />
+          <Property Name="COMPOSERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="PHOTO1" Type="nvarchar" MaxLength="100" />
+          <Property Name="PHOTO2" Type="nvarchar" MaxLength="100" />
+          <Property Name="PHOTO3" Type="nvarchar" MaxLength="100" />
+          <Property Name="PHOTO4" Type="nvarchar" MaxLength="100" />
+          <Property Name="TITLEYEAR" Type="nvarchar" MaxLength="4" />
+          <Property Name="PRODTYPE" Type="nvarchar" MaxLength="50" />
+          <Property Name="PRODTITLE" Type="nvarchar" MaxLength="60" />
+          <Property Name="ARRANGTYPE" Type="nvarchar" MaxLength="30" />
+          <Property Name="NOTES1" Type="nvarchar" MaxLength="150" />
+          <Property Name="NOTES2" Type="nvarchar" MaxLength="150" />
+          <Property Name="PLATE_NUMBER" Type="nvarchar" MaxLength="20" />
+          <Property Name="KEY" Type="nvarchar" MaxLength="15" />
+          <Property Name="ID_SHEETMUS" Type="int" Nullable="false" />
+          <Property Name="id_transfer" Type="int" />
+          <Property Name="PRINT" Type="bit" />
+          <Property Name="LARGE" Type="bit" />
+          <Property Name="NewRec" Type="bit" />
+          <Property Name="ARRANGYEAR" Type="nvarchar" MaxLength="4" />
+          <Property Name="PCN" Type="nvarchar" MaxLength="20" />
+          <Property Name="PICTURE" Type="nvarchar" MaxLength="100" />
+          <Property Name="SEARCHBOX" Type="nvarchar" MaxLength="100" />
+          <Property Name="TOTAL_ROWS" Type="int" />
+          <Property Name="ROW_NUM" Type="int" />
+          <Property Name="SORT_BY" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Silent">
+          <Key>
+            <PropertyRef Name="ID_SILENT" />
+          </Key>
+          <Property Name="TITLE" Type="nvarchar" MaxLength="110" />
+          <Property Name="CATNUM" Type="nvarchar" MaxLength="6" />
+          <Property Name="COMPOSERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="PUBLISHER" Type="nvarchar" MaxLength="100" />
+          <Property Name="COMPOSERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="PHOTO1" Type="nvarchar" MaxLength="100" />
+          <Property Name="PHOTO2" Type="nvarchar" MaxLength="100" />
+          <Property Name="PHOTO3" Type="nvarchar" MaxLength="100" />
+          <Property Name="PHOTO4" Type="nvarchar" MaxLength="100" />
+          <Property Name="TITLEYEAR" Type="nvarchar" MaxLength="4" />
+          <Property Name="PRODTYPE" Type="nvarchar" MaxLength="50" />
+          <Property Name="PRODTITLE" Type="nvarchar" MaxLength="60" />
+          <Property Name="ARRANGTYPE" Type="nvarchar" MaxLength="30" />
+          <Property Name="NOTES1" Type="nvarchar" MaxLength="150" />
+          <Property Name="NOTES2" Type="nvarchar" MaxLength="150" />
+          <Property Name="PLATE_NUMBER" Type="nvarchar" MaxLength="20" />
+          <Property Name="KEY" Type="nvarchar" MaxLength="15" />
+          <Property Name="id_transfer" Type="int" />
+          <Property Name="PRINT" Type="bit" />
+          <Property Name="LARGE" Type="bit" />
+          <Property Name="NewRec" Type="bit" />
+          <Property Name="ARRANGYEAR" Type="nvarchar" MaxLength="4" />
+          <Property Name="PCN" Type="nvarchar" MaxLength="20" />
+          <Property Name="ARRANGERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="ARRANGERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="ID_SILENT" Type="int" Nullable="false" />
+          <Property Name="PICTURE" Type="nvarchar" MaxLength="100" />
+          <Property Name="SEARCHBOX" Type="nvarchar" MaxLength="100" />
+          <Property Name="TOTAL_ROWS" Type="int" />
+          <Property Name="ROW_NUM" Type="int" />
+          <Property Name="SORT_BY" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Solos">
+          <Key>
+            <PropertyRef Name="ID_SOLOS" />
+          </Key>
+          <Property Name="TITLE" Type="nvarchar" MaxLength="110" />
+          <Property Name="CATNUM" Type="nvarchar" MaxLength="6" />
+          <Property Name="COMPOSERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="PUBLISHER" Type="nvarchar" MaxLength="100" />
+          <Property Name="COMPOSERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="PHOTO1" Type="nvarchar" MaxLength="100" />
+          <Property Name="PHOTO2" Type="nvarchar" MaxLength="100" />
+          <Property Name="PHOTO3" Type="nvarchar" MaxLength="100" />
+          <Property Name="PHOTO4" Type="nvarchar" MaxLength="100" />
+          <Property Name="TITLEYEAR" Type="nvarchar" MaxLength="4" />
+          <Property Name="PRODTYPE" Type="nvarchar" MaxLength="50" />
+          <Property Name="PRODTITLE" Type="nvarchar" MaxLength="60" />
+          <Property Name="ARRANGTYPE" Type="nvarchar" MaxLength="30" />
+          <Property Name="NOTES1" Type="nvarchar" MaxLength="150" />
+          <Property Name="NOTES2" Type="nvarchar" MaxLength="150" />
+          <Property Name="PLATE_NUMBER" Type="nvarchar" MaxLength="20" />
+          <Property Name="KEY" Type="nvarchar" MaxLength="15" />
+          <Property Name="id_transfer" Type="int" />
+          <Property Name="PRINT" Type="bit" />
+          <Property Name="LARGE" Type="bit" />
+          <Property Name="NewRec" Type="bit" />
+          <Property Name="ARRANGYEAR" Type="nvarchar" MaxLength="4" />
+          <Property Name="PCN" Type="nvarchar" MaxLength="20" />
+          <Property Name="INSTRUMENT" Type="nvarchar" MaxLength="50" />
+          <Property Name="PERFORMERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="PERFORMERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="ID_SOLOS" Type="int" Nullable="false" />
+          <Property Name="PICTURE" Type="nvarchar" MaxLength="100" />
+          <Property Name="SEARCHBOX" Type="nvarchar" MaxLength="100" />
+          <Property Name="TOTAL_ROWS" Type="int" />
+          <Property Name="ROW_NUM" Type="int" />
+          <Property Name="SORT_BY" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tracks">
+          <Key>
+            <PropertyRef Name="ID_TRACKS" />
+          </Key>
+          <Property Name="TITLE" Type="nvarchar" MaxLength="110" />
+          <Property Name="MEDIA_TITLE" Type="nvarchar" MaxLength="110" />
+          <Property Name="MEDIACAT" Type="nvarchar" MaxLength="25" />
+          <Property Name="MEDIUM" Type="nvarchar" MaxLength="20" />
+          <Property Name="PRINT" Type="bit" />
+          <Property Name="CATNUM" Type="nvarchar" MaxLength="6" />
+          <Property Name="TITLEYEAR" Type="nvarchar" MaxLength="4" />
+          <Property Name="COMPOSERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="COMPOSERS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="PERFORMERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="PERFORMERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="PERFORMERS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="PERFORMERS4" Type="nvarchar" MaxLength="70" />
+          <Property Name="PUBLISHER" Type="nvarchar" MaxLength="100" />
+          <Property Name="ARRANGERS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="ARRANGERS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS1" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS2" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS3" Type="nvarchar" MaxLength="70" />
+          <Property Name="LYRICISTS4" Type="nvarchar" MaxLength="30" />
+          <Property Name="NewRec" Type="bit" />
+          <Property Name="NOTES1" Type="nvarchar" MaxLength="150" />
+          <Property Name="NOTES2" Type="nvarchar" MaxLength="150" />
+          <Property Name="sourcetable" Type="nvarchar" MaxLength="30" />
+          <Property Name="sourcetableid" Type="int" />
+          <Property Name="bLinkedToSourceTable" Type="bit" />
+          <Property Name="ARRANGYEAR" Type="nvarchar" MaxLength="4" />
+          <Property Name="ARRANGTYPE" Type="nvarchar" MaxLength="30" />
+          <Property Name="COMPANY" Type="nvarchar" MaxLength="50" />
+          <Property Name="RECORD_DAY" Type="int" />
+          <Property Name="RECORD_MONTH" Type="int" />
+          <Property Name="RECORD_YEAR" Type="int" />
+          <Property Name="PRODTYPE" Type="nvarchar" MaxLength="50" />
+          <Property Name="PRODTITLE" Type="nvarchar" MaxLength="60" />
+          <Property Name="SOURCE_COMPANY" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_TRACKS" Type="int" Nullable="false" />
+          <Property Name="ID_MEDIA" Type="int" />
+          <Property Name="PICTURE" Type="nvarchar" MaxLength="100" />
+          <Property Name="SEARCHBOX" Type="nvarchar" MaxLength="100" />
+          <Property Name="TOTAL_ROWS" Type="int" />
+          <Property Name="ROW_NUM" Type="int" />
+          <Property Name="SORT_BY" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="CatalogDbModelStoreContainer">
+          <EntitySet Name="78" EntityType="Self.78" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FilmSongPerson" EntityType="Self.FilmSongPerson" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orchestrations" EntityType="Self.Orchestrations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pianorol" EntityType="Self.Pianorol" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Prp" EntityType="Self.Prp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SheetMus" EntityType="Self.SheetMus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Silent" EntityType="Self.Silent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Solos" EntityType="Self.Solos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tracks" EntityType="Self.Tracks" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CatalogDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Orchestration">
+          <Key>
+            <PropertyRef Name="ID_JAZZ" />
+          </Key>
+          <Property Name="TITLE" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+          <Property Name="CATNUM" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="ARRANGERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PUBLISHER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="ARRANGERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="TITLEYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="ARRANGYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="ARRANGTYPE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="KEY" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="PRODTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PRODTITLE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="PLATE_NUMBER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PRINT" Type="Boolean" />
+          <Property Name="ID_JAZZ" Type="Int32" Nullable="false" />
+          <Property Name="id_transfer" Type="Int32" />
+          <Property Name="LARGE" Type="Boolean" />
+          <Property Name="NewRec" Type="Boolean" />
+          <Property Name="PCN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TOTAL_ROWS" Type="Int32" />
+          <Property Name="SORT_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PICTURE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SEARCHBOX" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ROW_NUM" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="CatalogDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Orchestrations" EntityType="Self.Orchestration" />
+          <EntitySet Name="SheetMus" EntityType="CatalogDbModel.SheetMus" />
+          <EntitySet Name="C78" EntityType="CatalogDbModel.C78" />
+          <EntitySet Name="Books" EntityType="CatalogDbModel.Book" />
+          <EntitySet Name="FilmSongPersons" EntityType="CatalogDbModel.FilmSongPerson" />
+          <EntitySet Name="Pianorols" EntityType="CatalogDbModel.Pianorol" />
+          <EntitySet Name="Prps" EntityType="CatalogDbModel.Prp" />
+          <EntitySet Name="Silents" EntityType="CatalogDbModel.Silent" />
+          <EntitySet Name="Solos" EntityType="CatalogDbModel.Solo" />
+          <EntitySet Name="Tracks" EntityType="CatalogDbModel.Track" />
+        </EntityContainer>
+        <EntityType Name="SheetMus">
+          <Key>
+            <PropertyRef Name="ID_SHEETMUS" />
+          </Key>
+          <Property Name="TITLE" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+          <Property Name="CATNUM" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PUBLISHER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PHOTO1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PHOTO2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PHOTO3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PHOTO4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PRODTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PRODTITLE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ARRANGTYPE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="PLATE_NUMBER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="KEY" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ID_SHEETMUS" Type="Int32" Nullable="false" />
+          <Property Name="id_transfer" Type="Int32" />
+          <Property Name="PRINT" Type="Boolean" />
+          <Property Name="LARGE" Type="Boolean" />
+          <Property Name="NewRec" Type="Boolean" />
+          <Property Name="ARRANGYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="TITLEYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />		  
+          <Property Name="PCN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TOTAL_ROWS" Type="Int32" />
+          <Property Name="SORT_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PICTURE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SEARCHBOX" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ROW_NUM" Type="Int32" />
+        </EntityType>
+        <EntityType Name="C78">
+          <Key>
+            <PropertyRef Name="ID_78" />
+          </Key>
+          <Property Name="TITLE" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+          <Property Name="CATNUM" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PUBLISHER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PRODTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PRODTITLE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ARRANGTYPE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="id_transfer" Type="Int32" />
+          <Property Name="PRINT" Type="Boolean" />
+          <Property Name="NewRec" Type="Boolean" />
+          <Property Name="PERFORMERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPANY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PERFORMERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="ID_78" Type="Int32" Nullable="false" />
+          <Property Name="PERFORMERS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PERFORMERS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="DONE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MATRIX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MATRIX_NUM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MATRIX_PREFIX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MATRIX_SUFFIX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LOCATION" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PAGE_LINK" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RecDay" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="RecMonth" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="RecYear" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="FLD1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FLD2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FLD3" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FLD4" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FLD5" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FLD6" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FLD7" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FLD8" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="FLD1_DATA" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FLD2_DATA" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FLD3_DATA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FLD4_DATA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FLD5_DATA" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FLD6_DATA" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FLD7_DATA" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FLD8_DATA" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FLD_2_COUNT" Type="Int32" />
+          <Property Name="FLD_3_COUNT" Type="Int32" />
+          <Property Name="YEAR_SHEETMUS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="UCASE_FLD2_DATA" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TOTAL_ROWS" Type="Int32" />
+          <Property Name="SORT_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PICTURE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SEARCHBOX" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ROW_NUM" Type="Int32" />
+          <Property Name="YOUTUBE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Book">
+          <Key>
+            <PropertyRef Name="ID_BOOKS" />
+          </Key>
+          <Property Name="TITLE" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+          <Property Name="CATNUM" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PUBLISHER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TITLEYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="SUBJECT" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="KEYWORDS" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="ID_BOOKS" Type="Int32" Nullable="false" />
+          <Property Name="PRINT" Type="Boolean" />
+          <Property Name="NewRec" Type="Boolean" />
+          <Property Name="TOTAL_ROWS" Type="Int32" />
+          <Property Name="SORT_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SEARCHBOX" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ROW_NUM" Type="Int32" />
+        </EntityType>
+        <EntityType Name="FilmSongPerson">
+          <Key>
+            <PropertyRef Name="ID_FILMSONGPERSON" />
+          </Key>
+          <Property Name="FilmTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="FilmYear" Type="Int32" />
+          <Property Name="SongTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Person" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_FILMSONGPERSON" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TOTAL_ROWS" Type="Int32" />
+          <Property Name="SORT_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PICTURE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SEARCHBOX" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ROW_NUM" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Pianorol">
+          <Key>
+            <PropertyRef Name="ID_PIANOROL" />
+          </Key>
+          <Property Name="TITLE" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+          <Property Name="CATNUM" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PUBLISHER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="TITLEYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="PRODTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PRODTITLE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ARRANGTYPE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="id_transfer" Type="Int32" />
+          <Property Name="PRINT" Type="Boolean" />
+          <Property Name="NewRec" Type="Boolean" />
+          <Property Name="ARRANGYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="MEDIACAT" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="PERFORMERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPANY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PERFORMERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="ID_PIANOROL" Type="Int32" Nullable="false" />
+          <Property Name="TOTAL_ROWS" Type="Int32" />
+          <Property Name="SORT_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PICTURE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SEARCHBOX" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ROW_NUM" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Prp">
+          <Key>
+            <PropertyRef Name="ID_PRP" />
+          </Key>
+          <Property Name="TITLE" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+          <Property Name="CATNUM" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PUBLISHER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="TITLEYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="PRODTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PRODTITLE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ARRANGTYPE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="id_transfer" Type="Int32" />
+          <Property Name="PRINT" Type="Boolean" />
+          <Property Name="NewRec" Type="Boolean" />
+          <Property Name="ARRANGYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="MEDIACAT" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="PERFORMERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPANY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PERFORMERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="ID_PRP" Type="Int32" Nullable="false" />
+          <Property Name="TOTAL_ROWS" Type="Int32" />
+          <Property Name="SORT_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PICTURE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SEARCHBOX" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ROW_NUM" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Silent">
+          <Key>
+            <PropertyRef Name="ID_SILENT" />
+          </Key>
+          <Property Name="TITLE" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+          <Property Name="CATNUM" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PUBLISHER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PHOTO1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PHOTO2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PHOTO3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PHOTO4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TITLEYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="PRODTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PRODTITLE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ARRANGTYPE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="PLATE_NUMBER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="KEY" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="id_transfer" Type="Int32" />
+          <Property Name="PRINT" Type="Boolean" />
+          <Property Name="LARGE" Type="Boolean" />
+          <Property Name="NewRec" Type="Boolean" />
+          <Property Name="ARRANGYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="PCN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ARRANGERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="ARRANGERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="ID_SILENT" Type="Int32" Nullable="false" />
+          <Property Name="TOTAL_ROWS" Type="Int32" />
+          <Property Name="SORT_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PICTURE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SEARCHBOX" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ROW_NUM" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Solo">
+          <Key>
+            <PropertyRef Name="ID_SOLOS" />
+          </Key>
+          <Property Name="TITLE" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+          <Property Name="CATNUM" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PUBLISHER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PHOTO1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PHOTO2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PHOTO3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PHOTO4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TITLEYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="PRODTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PRODTITLE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ARRANGTYPE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="PLATE_NUMBER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="KEY" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="id_transfer" Type="Int32" />
+          <Property Name="PRINT" Type="Boolean" />
+          <Property Name="LARGE" Type="Boolean" />
+          <Property Name="NewRec" Type="Boolean" />
+          <Property Name="ARRANGYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="PCN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="INSTRUMENT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PERFORMERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PERFORMERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="ID_SOLOS" Type="Int32" Nullable="false" />
+          <Property Name="TOTAL_ROWS" Type="Int32" />
+          <Property Name="SORT_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PICTURE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SEARCHBOX" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ROW_NUM" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Track">
+          <Key>
+            <PropertyRef Name="ID_TRACKS" />
+          </Key>
+          <Property Name="TITLE" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+          <Property Name="MEDIA_TITLE" Type="String" MaxLength="110" FixedLength="false" Unicode="true" />
+          <Property Name="MEDIACAT" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="MEDIUM" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PRINT" Type="Boolean" />
+          <Property Name="CATNUM" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="TITLEYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="COMPOSERS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PERFORMERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PERFORMERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PERFORMERS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PERFORMERS4" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="PUBLISHER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ARRANGERS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="ARRANGERS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS3" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="LYRICISTS4" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="NewRec" Type="Boolean" />
+          <Property Name="NOTES1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NOTES2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="sourcetable" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="sourcetableid" Type="Int32" />
+          <Property Name="bLinkedToSourceTable" Type="Boolean" />
+          <Property Name="ARRANGYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="ARRANGTYPE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="COMPANY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RECORD_DAY" Type="Int32" />
+          <Property Name="RECORD_MONTH" Type="Int32" />
+          <Property Name="RECORD_YEAR" Type="Int32" />
+          <Property Name="PRODTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PRODTITLE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="SOURCE_COMPANY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_TRACKS" Type="Int32" Nullable="false" />
+          <Property Name="ID_MEDIA" Type="Int32" />
+          <Property Name="TOTAL_ROWS" Type="Int32" />
+          <Property Name="SORT_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PICTURE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SEARCHBOX" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ROW_NUM" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CatalogDbModelStoreContainer" CdmEntityContainer="CatalogDbEntities">
+          <EntitySetMapping Name="Orchestrations">
+            <EntityTypeMapping TypeName="CatalogDbModel.Orchestration">
+              <MappingFragment StoreEntitySet="Orchestrations">
+                <ScalarProperty Name="ROW_NUM" ColumnName="ROW_NUM" />
+                <ScalarProperty Name="SEARCHBOX" ColumnName="SEARCHBOX" />
+                <ScalarProperty Name="PICTURE" ColumnName="PICTURE" />
+                <ScalarProperty Name="SORT_BY" ColumnName="SORT_BY" />
+                <ScalarProperty Name="TOTAL_ROWS" ColumnName="TOTAL_ROWS" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+                <ScalarProperty Name="CATNUM" ColumnName="CATNUM" />
+                <ScalarProperty Name="ARRANGERS1" ColumnName="ARRANGERS1" />
+                <ScalarProperty Name="COMPOSERS1" ColumnName="COMPOSERS1" />
+                <ScalarProperty Name="LYRICISTS1" ColumnName="LYRICISTS1" />
+                <ScalarProperty Name="PUBLISHER" ColumnName="PUBLISHER" />
+                <ScalarProperty Name="COMPOSERS2" ColumnName="COMPOSERS2" />
+                <ScalarProperty Name="COMPOSERS3" ColumnName="COMPOSERS3" />
+                <ScalarProperty Name="COMPOSERS4" ColumnName="COMPOSERS4" />
+                <ScalarProperty Name="ARRANGERS2" ColumnName="ARRANGERS2" />
+                <ScalarProperty Name="LYRICISTS2" ColumnName="LYRICISTS2" />
+                <ScalarProperty Name="LYRICISTS3" ColumnName="LYRICISTS3" />
+                <ScalarProperty Name="LYRICISTS4" ColumnName="LYRICISTS4" />
+                <ScalarProperty Name="TITLEYEAR" ColumnName="TITLEYEAR" />
+                <ScalarProperty Name="ARRANGYEAR" ColumnName="ARRANGYEAR" />
+                <ScalarProperty Name="ARRANGTYPE" ColumnName="ARRANGTYPE" />
+                <ScalarProperty Name="KEY" ColumnName="KEY" />
+                <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+                <ScalarProperty Name="PRODTITLE" ColumnName="PRODTITLE" />
+                <ScalarProperty Name="NOTES1" ColumnName="NOTES1" />
+                <ScalarProperty Name="NOTES2" ColumnName="NOTES2" />
+                <ScalarProperty Name="PLATE_NUMBER" ColumnName="PLATE_NUMBER" />
+                <ScalarProperty Name="PRINT" ColumnName="PRINT" />
+                <ScalarProperty Name="ID_JAZZ" ColumnName="ID_JAZZ" />
+                <ScalarProperty Name="id_transfer" ColumnName="id_transfer" />
+                <ScalarProperty Name="LARGE" ColumnName="LARGE" />
+                <ScalarProperty Name="NewRec" ColumnName="NewRec" />
+                <ScalarProperty Name="PCN" ColumnName="PCN" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SheetMus">
+            <EntityTypeMapping TypeName="CatalogDbModel.SheetMus">
+              <MappingFragment StoreEntitySet="SheetMus">
+                <ScalarProperty Name="ROW_NUM" ColumnName="ROW_NUM" />
+                <ScalarProperty Name="SEARCHBOX" ColumnName="SEARCHBOX" />
+                <ScalarProperty Name="PICTURE" ColumnName="PICTURE" />
+                <ScalarProperty Name="SORT_BY" ColumnName="SORT_BY" />
+                <ScalarProperty Name="TOTAL_ROWS" ColumnName="TOTAL_ROWS" />
+                <ScalarProperty Name="PCN" ColumnName="PCN" />
+                <ScalarProperty Name="ARRANGYEAR" ColumnName="ARRANGYEAR" />
+                <ScalarProperty Name="TITLEYEAR" ColumnName="TITLEYEAR" />
+                <ScalarProperty Name="NewRec" ColumnName="NewRec" />
+                <ScalarProperty Name="LARGE" ColumnName="LARGE" />
+                <ScalarProperty Name="PRINT" ColumnName="PRINT" />
+                <ScalarProperty Name="id_transfer" ColumnName="id_transfer" />
+                <ScalarProperty Name="ID_SHEETMUS" ColumnName="ID_SHEETMUS" />
+                <ScalarProperty Name="KEY" ColumnName="KEY" />
+                <ScalarProperty Name="PLATE_NUMBER" ColumnName="PLATE_NUMBER" />
+                <ScalarProperty Name="NOTES2" ColumnName="NOTES2" />
+                <ScalarProperty Name="NOTES1" ColumnName="NOTES1" />
+                <ScalarProperty Name="ARRANGTYPE" ColumnName="ARRANGTYPE" />
+                <ScalarProperty Name="PRODTITLE" ColumnName="PRODTITLE" />
+                <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+                <ScalarProperty Name="PHOTO4" ColumnName="PHOTO4" />
+                <ScalarProperty Name="PHOTO3" ColumnName="PHOTO3" />
+                <ScalarProperty Name="PHOTO2" ColumnName="PHOTO2" />
+                <ScalarProperty Name="PHOTO1" ColumnName="PHOTO1" />
+                <ScalarProperty Name="LYRICISTS4" ColumnName="LYRICISTS4" />
+                <ScalarProperty Name="LYRICISTS3" ColumnName="LYRICISTS3" />
+                <ScalarProperty Name="LYRICISTS2" ColumnName="LYRICISTS2" />
+                <ScalarProperty Name="COMPOSERS4" ColumnName="COMPOSERS4" />
+                <ScalarProperty Name="COMPOSERS3" ColumnName="COMPOSERS3" />
+                <ScalarProperty Name="COMPOSERS2" ColumnName="COMPOSERS2" />
+                <ScalarProperty Name="PUBLISHER" ColumnName="PUBLISHER" />
+                <ScalarProperty Name="LYRICISTS1" ColumnName="LYRICISTS1" />
+                <ScalarProperty Name="COMPOSERS1" ColumnName="COMPOSERS1" />
+                <ScalarProperty Name="CATNUM" ColumnName="CATNUM" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C78">
+            <EntityTypeMapping TypeName="CatalogDbModel.C78">
+              <MappingFragment StoreEntitySet="78">
+                <ScalarProperty Name="YOUTUBE" ColumnName="YOUTUBE" />
+                <ScalarProperty Name="ROW_NUM" ColumnName="ROW_NUM" />
+                <ScalarProperty Name="SEARCHBOX" ColumnName="SEARCHBOX" />
+                <ScalarProperty Name="PICTURE" ColumnName="PICTURE" />
+                <ScalarProperty Name="SORT_BY" ColumnName="SORT_BY" />
+                <ScalarProperty Name="TOTAL_ROWS" ColumnName="TOTAL_ROWS" />
+                <ScalarProperty Name="UCASE_FLD2_DATA" ColumnName="UCASE_FLD2_DATA" />
+                <ScalarProperty Name="YEAR_SHEETMUS" ColumnName="YEAR_SHEETMUS" />
+                <ScalarProperty Name="FLD_3_COUNT" ColumnName="FLD_3_COUNT" />
+                <ScalarProperty Name="FLD_2_COUNT" ColumnName="FLD_2_COUNT" />
+                <ScalarProperty Name="FLD8_DATA" ColumnName="FLD8_DATA" />
+                <ScalarProperty Name="FLD7_DATA" ColumnName="FLD7_DATA" />
+                <ScalarProperty Name="FLD6_DATA" ColumnName="FLD6_DATA" />
+                <ScalarProperty Name="FLD5_DATA" ColumnName="FLD5_DATA" />
+                <ScalarProperty Name="FLD4_DATA" ColumnName="FLD4_DATA" />
+                <ScalarProperty Name="FLD3_DATA" ColumnName="FLD3_DATA" />
+                <ScalarProperty Name="FLD2_DATA" ColumnName="FLD2_DATA" />
+                <ScalarProperty Name="FLD1_DATA" ColumnName="FLD1_DATA" />
+                <ScalarProperty Name="FLD8" ColumnName="FLD8" />
+                <ScalarProperty Name="FLD7" ColumnName="FLD7" />
+                <ScalarProperty Name="FLD6" ColumnName="FLD6" />
+                <ScalarProperty Name="FLD5" ColumnName="FLD5" />
+                <ScalarProperty Name="FLD4" ColumnName="FLD4" />
+                <ScalarProperty Name="FLD3" ColumnName="FLD3" />
+                <ScalarProperty Name="FLD2" ColumnName="FLD2" />
+                <ScalarProperty Name="FLD1" ColumnName="FLD1" />
+                <ScalarProperty Name="RecYear" ColumnName="RecYear" />
+                <ScalarProperty Name="RecMonth" ColumnName="RecMonth" />
+                <ScalarProperty Name="RecDay" ColumnName="RecDay" />
+                <ScalarProperty Name="PAGE_LINK" ColumnName="PAGE_LINK" />
+                <ScalarProperty Name="LOCATION" ColumnName="LOCATION" />
+                <ScalarProperty Name="MATRIX_SUFFIX" ColumnName="MATRIX_SUFFIX" />
+                <ScalarProperty Name="MATRIX_PREFIX" ColumnName="MATRIX_PREFIX" />
+                <ScalarProperty Name="MATRIX_NUM" ColumnName="MATRIX_NUM" />
+                <ScalarProperty Name="MATRIX" ColumnName="MATRIX" />
+                <ScalarProperty Name="DONE" ColumnName="DONE" />
+                <ScalarProperty Name="PERFORMERS4" ColumnName="PERFORMERS4" />
+                <ScalarProperty Name="PERFORMERS3" ColumnName="PERFORMERS3" />
+                <ScalarProperty Name="ID_78" ColumnName="ID_78" />
+                <ScalarProperty Name="LYRICISTS4" ColumnName="LYRICISTS4" />
+                <ScalarProperty Name="LYRICISTS3" ColumnName="LYRICISTS3" />
+                <ScalarProperty Name="LYRICISTS2" ColumnName="LYRICISTS2" />
+                <ScalarProperty Name="PERFORMERS2" ColumnName="PERFORMERS2" />
+                <ScalarProperty Name="COMPANY" ColumnName="COMPANY" />
+                <ScalarProperty Name="LYRICISTS1" ColumnName="LYRICISTS1" />
+                <ScalarProperty Name="PERFORMERS1" ColumnName="PERFORMERS1" />
+                <ScalarProperty Name="NewRec" ColumnName="NewRec" />
+                <ScalarProperty Name="PRINT" ColumnName="PRINT" />
+                <ScalarProperty Name="id_transfer" ColumnName="id_transfer" />
+                <ScalarProperty Name="NOTES2" ColumnName="NOTES2" />
+                <ScalarProperty Name="NOTES1" ColumnName="NOTES1" />
+                <ScalarProperty Name="ARRANGTYPE" ColumnName="ARRANGTYPE" />
+                <ScalarProperty Name="PRODTITLE" ColumnName="PRODTITLE" />
+                <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+                <ScalarProperty Name="COMPOSERS4" ColumnName="COMPOSERS4" />
+                <ScalarProperty Name="COMPOSERS3" ColumnName="COMPOSERS3" />
+                <ScalarProperty Name="COMPOSERS2" ColumnName="COMPOSERS2" />
+                <ScalarProperty Name="PUBLISHER" ColumnName="PUBLISHER" />
+                <ScalarProperty Name="COMPOSERS1" ColumnName="COMPOSERS1" />
+                <ScalarProperty Name="CATNUM" ColumnName="CATNUM" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Books">
+            <EntityTypeMapping TypeName="CatalogDbModel.Book">
+              <MappingFragment StoreEntitySet="Books">
+                <ScalarProperty Name="ROW_NUM" ColumnName="ROW_NUM" />
+                <ScalarProperty Name="SEARCHBOX" ColumnName="SEARCHBOX" />
+                <ScalarProperty Name="SORT_BY" ColumnName="SORT_BY" />
+                <ScalarProperty Name="TOTAL_ROWS" ColumnName="TOTAL_ROWS" />
+                <ScalarProperty Name="NewRec" ColumnName="NewRec" />
+                <ScalarProperty Name="PRINT" ColumnName="PRINT" />
+                <ScalarProperty Name="ID_BOOKS" ColumnName="ID_BOOKS" />
+                <ScalarProperty Name="COMPOSERS4" ColumnName="COMPOSERS4" />
+                <ScalarProperty Name="COMPOSERS3" ColumnName="COMPOSERS3" />
+                <ScalarProperty Name="COMPOSERS2" ColumnName="COMPOSERS2" />
+                <ScalarProperty Name="NOTES2" ColumnName="NOTES2" />
+                <ScalarProperty Name="NOTES1" ColumnName="NOTES1" />
+                <ScalarProperty Name="KEYWORDS" ColumnName="KEYWORDS" />
+                <ScalarProperty Name="SUBJECT" ColumnName="SUBJECT" />
+                <ScalarProperty Name="TITLEYEAR" ColumnName="TITLEYEAR" />
+                <ScalarProperty Name="PUBLISHER" ColumnName="PUBLISHER" />
+                <ScalarProperty Name="COMPOSERS1" ColumnName="COMPOSERS1" />
+                <ScalarProperty Name="CATNUM" ColumnName="CATNUM" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FilmSongPersons">
+            <EntityTypeMapping TypeName="CatalogDbModel.FilmSongPerson">
+              <MappingFragment StoreEntitySet="FilmSongPerson">
+                <ScalarProperty Name="ROW_NUM" ColumnName="ROW_NUM" />
+                <ScalarProperty Name="SEARCHBOX" ColumnName="SEARCHBOX" />
+                <ScalarProperty Name="PICTURE" ColumnName="PICTURE" />
+                <ScalarProperty Name="SORT_BY" ColumnName="SORT_BY" />
+                <ScalarProperty Name="TOTAL_ROWS" ColumnName="TOTAL_ROWS" />
+                <ScalarProperty Name="ID_FILMSONGPERSON" ColumnName="ID_FILMSONGPERSON" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Person" ColumnName="Person" />
+                <ScalarProperty Name="SongTitle" ColumnName="SongTitle" />
+                <ScalarProperty Name="FilmYear" ColumnName="FilmYear" />
+                <ScalarProperty Name="FilmTitle" ColumnName="FilmTitle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pianorols">
+            <EntityTypeMapping TypeName="CatalogDbModel.Pianorol">
+              <MappingFragment StoreEntitySet="Pianorol">
+                <ScalarProperty Name="ROW_NUM" ColumnName="ROW_NUM" />
+                <ScalarProperty Name="SEARCHBOX" ColumnName="SEARCHBOX" />
+                <ScalarProperty Name="PICTURE" ColumnName="PICTURE" />
+                <ScalarProperty Name="SORT_BY" ColumnName="SORT_BY" />
+                <ScalarProperty Name="TOTAL_ROWS" ColumnName="TOTAL_ROWS" />
+                <ScalarProperty Name="ID_PIANOROL" ColumnName="ID_PIANOROL" />
+                <ScalarProperty Name="LYRICISTS4" ColumnName="LYRICISTS4" />
+                <ScalarProperty Name="LYRICISTS3" ColumnName="LYRICISTS3" />
+                <ScalarProperty Name="LYRICISTS2" ColumnName="LYRICISTS2" />
+                <ScalarProperty Name="PERFORMERS2" ColumnName="PERFORMERS2" />
+                <ScalarProperty Name="COMPANY" ColumnName="COMPANY" />
+                <ScalarProperty Name="LYRICISTS1" ColumnName="LYRICISTS1" />
+                <ScalarProperty Name="PERFORMERS1" ColumnName="PERFORMERS1" />
+                <ScalarProperty Name="MEDIACAT" ColumnName="MEDIACAT" />
+                <ScalarProperty Name="ARRANGYEAR" ColumnName="ARRANGYEAR" />
+                <ScalarProperty Name="NewRec" ColumnName="NewRec" />
+                <ScalarProperty Name="PRINT" ColumnName="PRINT" />
+                <ScalarProperty Name="id_transfer" ColumnName="id_transfer" />
+                <ScalarProperty Name="NOTES2" ColumnName="NOTES2" />
+                <ScalarProperty Name="NOTES1" ColumnName="NOTES1" />
+                <ScalarProperty Name="ARRANGTYPE" ColumnName="ARRANGTYPE" />
+                <ScalarProperty Name="PRODTITLE" ColumnName="PRODTITLE" />
+                <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+                <ScalarProperty Name="TITLEYEAR" ColumnName="TITLEYEAR" />
+                <ScalarProperty Name="COMPOSERS4" ColumnName="COMPOSERS4" />
+                <ScalarProperty Name="COMPOSERS3" ColumnName="COMPOSERS3" />
+                <ScalarProperty Name="COMPOSERS2" ColumnName="COMPOSERS2" />
+                <ScalarProperty Name="PUBLISHER" ColumnName="PUBLISHER" />
+                <ScalarProperty Name="COMPOSERS1" ColumnName="COMPOSERS1" />
+                <ScalarProperty Name="CATNUM" ColumnName="CATNUM" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prps">
+            <EntityTypeMapping TypeName="CatalogDbModel.Prp">
+              <MappingFragment StoreEntitySet="Prp">
+                <ScalarProperty Name="ROW_NUM" ColumnName="ROW_NUM" />
+                <ScalarProperty Name="SEARCHBOX" ColumnName="SEARCHBOX" />
+                <ScalarProperty Name="PICTURE" ColumnName="PICTURE" />
+                <ScalarProperty Name="SORT_BY" ColumnName="SORT_BY" />
+                <ScalarProperty Name="TOTAL_ROWS" ColumnName="TOTAL_ROWS" />
+                <ScalarProperty Name="ID_PRP" ColumnName="ID_PRP" />
+                <ScalarProperty Name="LYRICISTS4" ColumnName="LYRICISTS4" />
+                <ScalarProperty Name="LYRICISTS3" ColumnName="LYRICISTS3" />
+                <ScalarProperty Name="LYRICISTS2" ColumnName="LYRICISTS2" />
+                <ScalarProperty Name="PERFORMERS2" ColumnName="PERFORMERS2" />
+                <ScalarProperty Name="COMPANY" ColumnName="COMPANY" />
+                <ScalarProperty Name="LYRICISTS1" ColumnName="LYRICISTS1" />
+                <ScalarProperty Name="PERFORMERS1" ColumnName="PERFORMERS1" />
+                <ScalarProperty Name="MEDIACAT" ColumnName="MEDIACAT" />
+                <ScalarProperty Name="ARRANGYEAR" ColumnName="ARRANGYEAR" />
+                <ScalarProperty Name="NewRec" ColumnName="NewRec" />
+                <ScalarProperty Name="PRINT" ColumnName="PRINT" />
+                <ScalarProperty Name="id_transfer" ColumnName="id_transfer" />
+                <ScalarProperty Name="NOTES2" ColumnName="NOTES2" />
+                <ScalarProperty Name="NOTES1" ColumnName="NOTES1" />
+                <ScalarProperty Name="ARRANGTYPE" ColumnName="ARRANGTYPE" />
+                <ScalarProperty Name="PRODTITLE" ColumnName="PRODTITLE" />
+                <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+                <ScalarProperty Name="TITLEYEAR" ColumnName="TITLEYEAR" />
+                <ScalarProperty Name="COMPOSERS4" ColumnName="COMPOSERS4" />
+                <ScalarProperty Name="COMPOSERS3" ColumnName="COMPOSERS3" />
+                <ScalarProperty Name="COMPOSERS2" ColumnName="COMPOSERS2" />
+                <ScalarProperty Name="PUBLISHER" ColumnName="PUBLISHER" />
+                <ScalarProperty Name="COMPOSERS1" ColumnName="COMPOSERS1" />
+                <ScalarProperty Name="CATNUM" ColumnName="CATNUM" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Silents">
+            <EntityTypeMapping TypeName="CatalogDbModel.Silent">
+              <MappingFragment StoreEntitySet="Silent">
+                <ScalarProperty Name="ROW_NUM" ColumnName="ROW_NUM" />
+                <ScalarProperty Name="SEARCHBOX" ColumnName="SEARCHBOX" />
+                <ScalarProperty Name="PICTURE" ColumnName="PICTURE" />
+                <ScalarProperty Name="SORT_BY" ColumnName="SORT_BY" />
+                <ScalarProperty Name="TOTAL_ROWS" ColumnName="TOTAL_ROWS" />
+                <ScalarProperty Name="ID_SILENT" ColumnName="ID_SILENT" />
+                <ScalarProperty Name="ARRANGERS2" ColumnName="ARRANGERS2" />
+                <ScalarProperty Name="ARRANGERS1" ColumnName="ARRANGERS1" />
+                <ScalarProperty Name="PCN" ColumnName="PCN" />
+                <ScalarProperty Name="ARRANGYEAR" ColumnName="ARRANGYEAR" />
+                <ScalarProperty Name="NewRec" ColumnName="NewRec" />
+                <ScalarProperty Name="LARGE" ColumnName="LARGE" />
+                <ScalarProperty Name="PRINT" ColumnName="PRINT" />
+                <ScalarProperty Name="id_transfer" ColumnName="id_transfer" />
+                <ScalarProperty Name="KEY" ColumnName="KEY" />
+                <ScalarProperty Name="PLATE_NUMBER" ColumnName="PLATE_NUMBER" />
+                <ScalarProperty Name="NOTES2" ColumnName="NOTES2" />
+                <ScalarProperty Name="NOTES1" ColumnName="NOTES1" />
+                <ScalarProperty Name="ARRANGTYPE" ColumnName="ARRANGTYPE" />
+                <ScalarProperty Name="PRODTITLE" ColumnName="PRODTITLE" />
+                <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+                <ScalarProperty Name="TITLEYEAR" ColumnName="TITLEYEAR" />
+                <ScalarProperty Name="PHOTO4" ColumnName="PHOTO4" />
+                <ScalarProperty Name="PHOTO3" ColumnName="PHOTO3" />
+                <ScalarProperty Name="PHOTO2" ColumnName="PHOTO2" />
+                <ScalarProperty Name="PHOTO1" ColumnName="PHOTO1" />
+                <ScalarProperty Name="COMPOSERS4" ColumnName="COMPOSERS4" />
+                <ScalarProperty Name="COMPOSERS3" ColumnName="COMPOSERS3" />
+                <ScalarProperty Name="COMPOSERS2" ColumnName="COMPOSERS2" />
+                <ScalarProperty Name="PUBLISHER" ColumnName="PUBLISHER" />
+                <ScalarProperty Name="COMPOSERS1" ColumnName="COMPOSERS1" />
+                <ScalarProperty Name="CATNUM" ColumnName="CATNUM" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Solos">
+            <EntityTypeMapping TypeName="CatalogDbModel.Solo">
+              <MappingFragment StoreEntitySet="Solos">
+                <ScalarProperty Name="ROW_NUM" ColumnName="ROW_NUM" />
+                <ScalarProperty Name="SEARCHBOX" ColumnName="SEARCHBOX" />
+                <ScalarProperty Name="PICTURE" ColumnName="PICTURE" />
+                <ScalarProperty Name="SORT_BY" ColumnName="SORT_BY" />
+                <ScalarProperty Name="TOTAL_ROWS" ColumnName="TOTAL_ROWS" />
+                <ScalarProperty Name="ID_SOLOS" ColumnName="ID_SOLOS" />
+                <ScalarProperty Name="PERFORMERS2" ColumnName="PERFORMERS2" />
+                <ScalarProperty Name="PERFORMERS1" ColumnName="PERFORMERS1" />
+                <ScalarProperty Name="INSTRUMENT" ColumnName="INSTRUMENT" />
+                <ScalarProperty Name="PCN" ColumnName="PCN" />
+                <ScalarProperty Name="ARRANGYEAR" ColumnName="ARRANGYEAR" />
+                <ScalarProperty Name="NewRec" ColumnName="NewRec" />
+                <ScalarProperty Name="LARGE" ColumnName="LARGE" />
+                <ScalarProperty Name="PRINT" ColumnName="PRINT" />
+                <ScalarProperty Name="id_transfer" ColumnName="id_transfer" />
+                <ScalarProperty Name="KEY" ColumnName="KEY" />
+                <ScalarProperty Name="PLATE_NUMBER" ColumnName="PLATE_NUMBER" />
+                <ScalarProperty Name="NOTES2" ColumnName="NOTES2" />
+                <ScalarProperty Name="NOTES1" ColumnName="NOTES1" />
+                <ScalarProperty Name="ARRANGTYPE" ColumnName="ARRANGTYPE" />
+                <ScalarProperty Name="PRODTITLE" ColumnName="PRODTITLE" />
+                <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+                <ScalarProperty Name="TITLEYEAR" ColumnName="TITLEYEAR" />
+                <ScalarProperty Name="PHOTO4" ColumnName="PHOTO4" />
+                <ScalarProperty Name="PHOTO3" ColumnName="PHOTO3" />
+                <ScalarProperty Name="PHOTO2" ColumnName="PHOTO2" />
+                <ScalarProperty Name="PHOTO1" ColumnName="PHOTO1" />
+                <ScalarProperty Name="LYRICISTS4" ColumnName="LYRICISTS4" />
+                <ScalarProperty Name="LYRICISTS3" ColumnName="LYRICISTS3" />
+                <ScalarProperty Name="LYRICISTS2" ColumnName="LYRICISTS2" />
+                <ScalarProperty Name="COMPOSERS4" ColumnName="COMPOSERS4" />
+                <ScalarProperty Name="COMPOSERS3" ColumnName="COMPOSERS3" />
+                <ScalarProperty Name="COMPOSERS2" ColumnName="COMPOSERS2" />
+                <ScalarProperty Name="PUBLISHER" ColumnName="PUBLISHER" />
+                <ScalarProperty Name="LYRICISTS1" ColumnName="LYRICISTS1" />
+                <ScalarProperty Name="COMPOSERS1" ColumnName="COMPOSERS1" />
+                <ScalarProperty Name="CATNUM" ColumnName="CATNUM" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tracks">
+            <EntityTypeMapping TypeName="CatalogDbModel.Track">
+              <MappingFragment StoreEntitySet="Tracks">
+                <ScalarProperty Name="ROW_NUM" ColumnName="ROW_NUM" />
+                <ScalarProperty Name="SEARCHBOX" ColumnName="SEARCHBOX" />
+                <ScalarProperty Name="PICTURE" ColumnName="PICTURE" />
+                <ScalarProperty Name="SORT_BY" ColumnName="SORT_BY" />
+                <ScalarProperty Name="TOTAL_ROWS" ColumnName="TOTAL_ROWS" />
+                <ScalarProperty Name="ID_MEDIA" ColumnName="ID_MEDIA" />
+                <ScalarProperty Name="ID_TRACKS" ColumnName="ID_TRACKS" />
+                <ScalarProperty Name="SOURCE_COMPANY" ColumnName="SOURCE_COMPANY" />
+                <ScalarProperty Name="PRODTITLE" ColumnName="PRODTITLE" />
+                <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+                <ScalarProperty Name="RECORD_YEAR" ColumnName="RECORD_YEAR" />
+                <ScalarProperty Name="RECORD_MONTH" ColumnName="RECORD_MONTH" />
+                <ScalarProperty Name="RECORD_DAY" ColumnName="RECORD_DAY" />
+                <ScalarProperty Name="COMPANY" ColumnName="COMPANY" />
+                <ScalarProperty Name="ARRANGTYPE" ColumnName="ARRANGTYPE" />
+                <ScalarProperty Name="ARRANGYEAR" ColumnName="ARRANGYEAR" />
+                <ScalarProperty Name="bLinkedToSourceTable" ColumnName="bLinkedToSourceTable" />
+                <ScalarProperty Name="sourcetableid" ColumnName="sourcetableid" />
+                <ScalarProperty Name="sourcetable" ColumnName="sourcetable" />
+                <ScalarProperty Name="NOTES2" ColumnName="NOTES2" />
+                <ScalarProperty Name="NOTES1" ColumnName="NOTES1" />
+                <ScalarProperty Name="NewRec" ColumnName="NewRec" />
+                <ScalarProperty Name="LYRICISTS4" ColumnName="LYRICISTS4" />
+                <ScalarProperty Name="LYRICISTS3" ColumnName="LYRICISTS3" />
+                <ScalarProperty Name="LYRICISTS2" ColumnName="LYRICISTS2" />
+                <ScalarProperty Name="LYRICISTS1" ColumnName="LYRICISTS1" />
+                <ScalarProperty Name="ARRANGERS2" ColumnName="ARRANGERS2" />
+                <ScalarProperty Name="ARRANGERS1" ColumnName="ARRANGERS1" />
+                <ScalarProperty Name="PUBLISHER" ColumnName="PUBLISHER" />
+                <ScalarProperty Name="PERFORMERS4" ColumnName="PERFORMERS4" />
+                <ScalarProperty Name="PERFORMERS3" ColumnName="PERFORMERS3" />
+                <ScalarProperty Name="PERFORMERS2" ColumnName="PERFORMERS2" />
+                <ScalarProperty Name="PERFORMERS1" ColumnName="PERFORMERS1" />
+                <ScalarProperty Name="COMPOSERS4" ColumnName="COMPOSERS4" />
+                <ScalarProperty Name="COMPOSERS3" ColumnName="COMPOSERS3" />
+                <ScalarProperty Name="COMPOSERS2" ColumnName="COMPOSERS2" />
+                <ScalarProperty Name="COMPOSERS1" ColumnName="COMPOSERS1" />
+                <ScalarProperty Name="TITLEYEAR" ColumnName="TITLEYEAR" />
+                <ScalarProperty Name="CATNUM" ColumnName="CATNUM" />
+                <ScalarProperty Name="PRINT" ColumnName="PRINT" />
+                <ScalarProperty Name="MEDIUM" ColumnName="MEDIUM" />
+                <ScalarProperty Name="MEDIACAT" ColumnName="MEDIACAT" />
+                <ScalarProperty Name="MEDIA_TITLE" ColumnName="MEDIA_TITLE" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

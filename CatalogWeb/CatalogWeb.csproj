@@ -1,0 +1,732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{513621C5-3C74-4A94-877D-42CB86524D12}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CatalogWeb</RootNamespace>
+    <AssemblyName>CatalogWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NUglify, Version=1.21.17.0, Culture=neutral, PublicKeyToken=15bc7810aec21b5e, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUglify.1.21.17\lib\net40\NUglify.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App\baseDirective.js" />
+    <Content Include="App\baseService.js" />
+    <Content Include="App\78Browse.js" />
+    <Content Include="App\TracksBrowse.js" />
+    <Content Include="App\PrpBrowse.js" />
+    <Content Include="App\PianorolBrowse.js" />
+    <Content Include="App\SilentBrowse.js" />
+    <Content Include="App\SolosBrowse.js" />
+    <Content Include="App\SheetMusBrowse.js" />
+    <Content Include="App\OrchestrationBrowse.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\%27S WONDERFUL.pdf" />
+    <Content Include="Content\Images\ALONG WITH ME.pdf" />
+    <Content Include="Content\Images\ALWAYS TRUE TO YOU IN MY FASHION.pdf" />
+    <Content Include="Content\Images\AMONG MY SOUVENIRS.pdf" />
+    <Content Include="Content\Images\AND THE ANGELS SING.pdf" />
+    <Content Include="Content\Images\ANGEL CHILD.pdf" />
+    <Content Include="Content\Images\ANNIVERSARY SONG.pdf" />
+    <Content Include="Content\Images\APRIL IN PARIS.pdf" />
+    <Content Include="Content\Images\APRIL SHOWERS.pdf" />
+    <Content Include="Content\Images\AS TIME GOES BY.pdf" />
+    <Content Include="Content\Images\ASK ANYONE WHO KNOWS.pdf" />
+    <Content Include="Content\Images\AT LONG LAST LOVE.pdf" />
+    <Content Include="Content\Images\AT THE BALALAIKA.pdf" />
+    <Content Include="Content\Images\AUF WIEDERSEHEN, MY DEAR.pdf" />
+    <Content Include="Content\Images\AUTUMN NOCTURNE.pdf" />
+    <Content Include="Content\Images\BACK IN YOUR OWN BACK YARD.pdf" />
+    <Content Include="Content\Images\BALI HA%27I.pdf" />
+    <Content Include="Content\Images\BAMBALINA.pdf" />
+    <Content Include="Content\Images\BE STILL MY HEART.pdf" />
+    <Content Include="Content\Images\BELLS OF ST MARY%27S, THE.pdf" />
+    <Content Include="Content\Images\BEST THINGS IN LIFE ARE FREE, THE.pdf" />
+    <Content Include="Content\Images\BEYOND THE BLUE HORIZON.pdf" />
+    <Content Include="Content\Images\BIDIN%27 MY TIME.pdf" />
+    <Content Include="Content\Images\BLACK BOTTOM.pdf" />
+    <Content Include="Content\Images\BLUE %28L. HANDMAN%29.pdf" />
+    <Content Include="Content\Images\BLUE CHAMPAGNE.pdf" />
+    <Content Include="Content\Images\BLUE MOON.pdf" />
+    <Content Include="Content\Images\BLUE ROOM, THE.pdf" />
+    <Content Include="Content\Images\BLUES SERENADE.pdf" />
+    <Content Include="Content\Images\BODY AND SOUL.pdf" />
+    <Content Include="Content\Images\BOO HOO.pdf" />
+    <Content Include="Content\Images\BOULEVARD OF BROKEN DREAMS.pdf" />
+    <Content Include="Content\Images\BROADWAY MELODY.pdf" />
+    <Content Include="Content\Images\BROADWAY RHYTHM.pdf" />
+    <Content Include="Content\Images\BUT BEAUTIFUL.pdf" />
+    <Content Include="Content\Images\BUT NOT FOR ME.pdf" />
+    <Content Include="Content\Images\BUTTON UP YOUR OVERCOAT.pdf" />
+    <Content Include="Content\Images\BY A WATERFALL.pdf" />
+    <Content Include="Content\Images\BY HECK.pdf" />
+    <Content Include="Content\Images\BY THE LIGHT OF THE SILVERY MOON.pdf" />
+    <Content Include="Content\Images\BY THE RIVER SAINTE MARIE.pdf" />
+    <Content Include="Content\Images\BYE BYE BLACKBIRD.pdf" />
+    <Content Include="Content\Images\CALIFORNIA %28HERE I COME%29.pdf" />
+    <Content Include="Content\Images\CAN I FORGET YOU.pdf" />
+    <Content Include="Content\Images\CAN THIS BE LOVE.pdf" />
+    <Content Include="Content\Images\CAN%27T HELP LOVIN%27 DAT MAN.pdf" />
+    <Content Include="Content\Images\CAN%27T WE BE FRIENDS.pdf" />
+    <Content Include="Content\Images\CAROLINA IN THE MORNING.pdf" />
+    <Content Include="Content\Images\CECILA.pdf" />
+    <Content Include="Content\Images\CHANSONETTE.pdf" />
+    <Content Include="Content\Images\CHARLEY,  MY BOY.pdf" />
+    <Content Include="Content\Images\CHEERFUL LITTLE EARFUL.pdf" />
+    <Content Include="Content\Images\CHLO-E.pdf" />
+    <Content Include="Content\Images\CLOSE AS PAGES IN A BOOK.pdf" />
+    <Content Include="Content\Images\CLOSE TO YOU.pdf" />
+    <Content Include="Content\Images\COCKTAILS FOR TWO.pdf" />
+    <Content Include="Content\Images\COLLEGIATE.pdf" />
+    <Content Include="Content\Images\COME RAIN OR COME SHINE.pdf" />
+    <Content Include="Content\Images\CONTINENTAL, THE.pdf" />
+    <Content Include="Content\Images\COTTAGE FOR SALE, A.pdf" />
+    <Content Include="Content\Images\CROSS YOUR HEART.pdf" />
+    <Content Include="Content\Images\CUDDLE UP A LITTLE CLOSER.pdf" />
+    <Content Include="Content\Images\CYNTHIA%27S IN LOVE.pdf" />
+    <Content Include="Content\Images\DANCING IN THE DARK.pdf" />
+    <Content Include="Content\Images\DANCING ON THE CEILING.pdf" />
+    <Content Include="Content\Images\DARDENELLA.pdf" />
+    <Content Include="Content\Images\DARLING, JE VOUS AIME BEACOUP.pdf" />
+    <Content Include="Content\Images\DARN THAT DREAM.pdf" />
+    <Content Include="Content\Images\DAY BY DAY.pdf" />
+    <Content Include="Content\Images\DEAREST %28YOU%27RE THE NEAREST TO MY HEART%29.pdf" />
+    <Content Include="Content\Images\DEEP NIGHT.pdf" />
+    <Content Include="Content\Images\DEEP PURPLE.pdf" />
+    <Content Include="Content\Images\DID I REMEMBER0.pdf" />
+    <Content Include="Content\Images\DID YOU EVER SEE A DREAM WALKING.pdf" />
+    <Content Include="Content\Images\DO YOU EVER THINK OF ME.pdf" />
+    <Content Include="Content\Images\DOES YOUR HEART BEAT FOR ME.pdf" />
+    <Content Include="Content\Images\DOLORES.pdf" />
+    <Content Include="Content\Images\DON%27T BLAME ME.pdf" />
+    <Content Include="Content\Images\DON%27T TAKE YOU LOVE FROM ME.pdf" />
+    <Content Include="Content\Images\DOODLE DOO DOO.pdf" />
+    <Content Include="Content\Images\DOWN AMONG THE SHELTERING PALMS.pdf" />
+    <Content Include="Content\Images\DREAM A LITTLE DREAM OF ME.pdf" />
+    <Content Include="Content\Images\DREAM.pdf" />
+    <Content Include="Content\Images\EAST OF THE SUN.pdf" />
+    <Content Include="Content\Images\EASY TO LOVE.pdf" />
+    <Content Include="Content\Images\EMBRACEABLE YOU.pdf" />
+    <Content Include="Content\Images\EV%27RY TIME WE SAY GOODBYE.pdf" />
+    <Content Include="Content\Images\EVELINA.pdf" />
+    <Content Include="Content\Images\EVERY LITTLE MOVEMENT.pdf" />
+    <Content Include="Content\Images\EVERYTHING HAPPENS TO ME.pdf" />
+    <Content Include="Content\Images\FADED SUMMER LOVE, A.pdf" />
+    <Content Include="Content\Images\FAREWELL TO ARMS.pdf" />
+    <Content Include="Content\Images\FASCINATING RHYTHM.pdf" />
+    <Content Include="Content\Images\FDR JONES.pdf" />
+    <Content Include="Content\Images\FEATHER YOUR NEST.pdf" />
+    <Content Include="Content\Images\FELLOW NEEDS A GIRL, A.pdf" />
+    <Content Include="Content\Images\FLYING DOWN TO RIO.pdf" />
+    <Content Include="Content\Images\FOGGY DAY, A.pdf" />
+    <Content Include="Content\Images\FOOLS RUSH IN.pdf" />
+    <Content Include="Content\Images\FOR ALL WE KNOW.pdf" />
+    <Content Include="Content\Images\FOR YOU, FOR ME, FOR EVERMORE.pdf" />
+    <Content Include="Content\Images\FROM NOW ON.pdf" />
+    <Content Include="Content\Images\GARDEN IN THE RAIN, A.pdf" />
+    <Content Include="Content\Images\GEE! BUT YOU%27RE SWELL.pdf" />
+    <Content Include="Content\Images\GET OUT OF TOWN.pdf" />
+    <Content Include="Content\Images\GHOST OF A CHANCE, A.pdf" />
+    <Content Include="Content\Images\GIMME A LITTLE KISS, WILL YA HUH.pdf" />
+    <Content Include="Content\Images\GIRL FRIEND, THE.pdf" />
+    <Content Include="Content\Images\GLORY OF LOVE, THE.pdf" />
+    <Content Include="Content\Images\GOLD DIGGER%27S SONG, THE.pdf" />
+    <Content Include="Content\Images\GOOD NEWS.pdf" />
+    <Content Include="Content\Images\GOOD NIGHT SWEETHEART.pdf" />
+    <Content Include="Content\Images\GOODY OODY.pdf" />
+    <Content Include="Content\Images\GUILTY.pdf" />
+    <Content Include="Content\Images\HANDS ACROSS THE TABLE.pdf" />
+    <Content Include="Content\Images\HAPPY DAYS ARE HERE AGAIN.pdf" />
+    <Content Include="Content\Images\HARBOR LIGHTS.pdf" />
+    <Content Include="Content\Images\HAUNTED HEART.pdf" />
+    <Content Include="Content\Images\HAVE YOU EVER BEEN LONELY.pdf" />
+    <Content Include="Content\Images\HEART AND SOUL.pdf" />
+    <Content Include="Content\Images\HEIGH HO.pdf" />
+    <Content Include="Content\Images\HERE COMES THE SHOWBOAT.pdf" />
+    <Content Include="Content\Images\HERE I%27LL STAY.pdf" />
+    <Content Include="Content\Images\HERE IN MY ARMS.pdf" />
+    <Content Include="Content\Images\HI NEIGHBOR.pdf" />
+    <Content Include="Content\Images\HOLD ME.pdf" />
+    <Content Include="Content\Images\HOME.pdf" />
+    <Content Include="Content\Images\HONEY SONG, THE.pdf" />
+    <Content Include="Content\Images\HONEY.pdf" />
+    <Content Include="Content\Images\HOW AM I TO KNOW.pdf" />
+    <Content Include="Content\Images\HOW ARE THINGS IN GLOCCA MORRA.pdf" />
+    <Content Include="Content\Images\HOW SWEET YOU ARE.pdf" />
+    <Content Include="Content\Images\I CAN DREAM, CAN%27T I.pdf" />
+    <Content Include="Content\Images\I CAN%27T BEGIN TO TELL YOU.pdf" />
+    <Content Include="Content\Images\I CAN%27T BELIEVE YOU%27RE IN LOVE WITH ME.pdf" />
+    <Content Include="Content\Images\I CAN%27T GET STARTED.pdf" />
+    <Content Include="Content\Images\I COVER THE WATERFRONT.pdf" />
+    <Content Include="Content\Images\I DON%27T KNOW WHY.pdf" />
+    <Content Include="Content\Images\I DON%27T WANT TO SET THE WORLD ON FIRE.pdf" />
+    <Content Include="Content\Images\I DON%27T WANT TO WALK WITHOUT YOU.pdf" />
+    <Content Include="Content\Images\I DREAM OF YOU.pdf" />
+    <Content Include="Content\Images\I FOUND A MILLION DOLLAR BABY.pdf" />
+    <Content Include="Content\Images\I GET A KICK OUT OF YOU.pdf" />
+    <Content Include="Content\Images\I GOT PLENTY O%27 NUTTIN%27.pdf" />
+    <Content Include="Content\Images\I GUESS I%27LL HAVE TO CHANGE MY PLAN.pdf" />
+    <Content Include="Content\Images\I HADN%27T ANYONE TIL YOU.pdf" />
+    <Content Include="Content\Images\I HEAR A RHAPSODY.pdf" />
+    <Content Include="Content\Images\I KISS YOUR HAND MADAME.pdf" />
+    <Content Include="Content\Images\I LOVE LOUISA.pdf" />
+    <Content Include="Content\Images\I LOVE YOU.pdf" />
+    <Content Include="Content\Images\I MARRIED AN ANGEL.pdf" />
+    <Content Include="Content\Images\I ONLY HAVE EYES FOR YOU.pdf" />
+    <Content Include="Content\Images\I SURRENDER DEAR.pdf" />
+    <Content Include="Content\Images\I UNDERSTAND.pdf" />
+    <Content Include="Content\Images\I WANNA BE LOVED BY YOU.pdf" />
+    <Content Include="Content\Images\I WANNA GET MARRIED.pdf" />
+    <Content Include="Content\Images\I%27LL BE HOME FOR CHRISTMAS.pdf" />
+    <Content Include="Content\Images\I%27LL BE YOURS %28J%27ATTENDRAI%29.pdf" />
+    <Content Include="Content\Images\I%27LL GET BY.pdf" />
+    <Content Include="Content\Images\I%27LL NEVER BE THE SAME.pdf" />
+    <Content Include="Content\Images\I%27LL NEVER SMILE AGAIN.pdf" />
+    <Content Include="Content\Images\I%27LL SEE YOU IN MY DREAMS.pdf" />
+    <Content Include="Content\Images\I%27LL STRING ALONG WITH YOU.pdf" />
+    <Content Include="Content\Images\I%27LL WALK ALONE.pdf" />
+    <Content Include="Content\Images\I%27M GETTING SENTIMENTAL OVER YOU.pdf" />
+    <Content Include="Content\Images\I%27M IN THE MOOD FOR LOVE.pdf" />
+    <Content Include="Content\Images\I%27M LOOKING OVER A FOUR LEAF CLOVER.pdf" />
+    <Content Include="Content\Images\I%27M NOBOY%27S BABY.pdf" />
+    <Content Include="Content\Images\I%27M SITTING ON TOP OF THE WORLD.pdf" />
+    <Content Include="Content\Images\I%27M THRU WITH LOVE.pdf" />
+    <Content Include="Content\Images\I%27M YOURS.pdf" />
+    <Content Include="Content\Images\I%27VE GOT MY EYES ON YOU.pdf" />
+    <Content Include="Content\Images\I%27VE GOT RINGS ON MY FINGERS.pdf" />
+    <Content Include="Content\Images\I%27VE GOT YOU UNDER MY SKIN.pdf" />
+    <Content Include="Content\Images\IF I DIDN%27T CARE.pdf" />
+    <Content Include="Content\Images\IF I HAD YOU.pdf" />
+    <Content Include="Content\Images\IF I LOVE AGAIN.pdf" />
+    <Content Include="Content\Images\IF I LOVED YOU.pdf" />
+    <Content Include="Content\Images\IF THERE IS SOMEONE LOVLIER THAN YOU.pdf" />
+    <Content Include="Content\Images\IF THIS ISN%27T LOVE.pdf" />
+    <Content Include="Content\Images\IF WE CAN%27T BE THE SAME OLD SWEETHEARTS.pdf" />
+    <Content Include="Content\Images\IF YOU KNEW SUZIE.pdf" />
+    <Content Include="Content\Images\IF YOU WERE MINE.pdf" />
+    <Content Include="Content\Images\IN A SENTIMENTAL MOOD.pdf" />
+    <Content Include="Content\Images\IN THE BLUE OF THE EVENING.pdf" />
+    <Content Include="Content\Images\IN THE STILL OF THE NIGHT.pdf" />
+    <Content Include="Content\Images\INDIAN LOVE CALL.pdf" />
+    <Content Include="Content\Images\INDIAN SUMMER.pdf" />
+    <Content Include="Content\Images\IRENE.pdf" />
+    <Content Include="Content\Images\IS IT TRUE WHAT THEY SAY ABOUT DIXIE.pdf" />
+    <Content Include="Content\Images\ISN%27T IT ROMANTIC.pdf" />
+    <Content Include="Content\Images\IT AIN%27T NECESSARILY SO.pdf" />
+    <Content Include="Content\Images\IT CAN%27T BE WRONG.pdf" />
+    <Content Include="Content\Images\IT HAD TO BE YOU.pdf" />
+    <Content Include="Content\Images\IT LOOKS LIKE RAIN IN CHERRY BLOSSOM LAKE.pdf" />
+    <Content Include="Content\Images\IT MIGHT AS WELL BE SPRING.pdf" />
+    <Content Include="Content\Images\IT MUST BE TRUE %28YOU ARE MINE, ALL MINE%29.pdf" />
+    <Content Include="Content\Images\IT WAS SO BEAUTIFUL.pdf" />
+    <Content Include="Content\Images\IT%27S BEEN A LONG, LONG TIME.pdf" />
+    <Content Include="Content\Images\IT%27S D%27LOVELY.pdf" />
+    <Content Include="Content\Images\IT%27S MUSIC.pdf" />
+    <Content Include="Content\Images\IT%27S ONLY A PAPER MOON.pdf" />
+    <Content Include="Content\Images\IT%27S THE TALK OF THE TOWN.pdf" />
+    <Content Include="Content\Images\JEALOUS.pdf" />
+    <Content Include="Content\Images\JOSEPHINE.pdf" />
+    <Content Include="Content\Images\JUNE IN JANUARY.pdf" />
+    <Content Include="Content\Images\JUNE NIGHT.pdf" />
+    <Content Include="Content\Images\JUST A MEMORY.pdf" />
+    <Content Include="Content\Images\JUST ONE MORE CHANCE.pdf" />
+    <Content Include="Content\Images\JUST ONE OF THOSE THINGS.pdf" />
+    <Content Include="Content\Images\KINKAJOU, THE.pdf" />
+    <Content Include="Content\Images\KISS THE BOYS GOODBYE.pdf" />
+    <Content Include="Content\Images\LAST TIME I SAW PARIS, THE.pdf" />
+    <Content Include="Content\Images\LAURA.pdf" />
+    <Content Include="Content\Images\LAZY RIVER.pdf" />
+    <Content Include="Content\Images\LIES.pdf" />
+    <Content Include="Content\Images\LIGHTS OUT.pdf" />
+    <Content Include="Content\Images\LILLI MARLENE.pdf" />
+    <Content Include="Content\Images\LINDA.pdf" />
+    <Content Include="Content\Images\LINGER AWHILE.pdf" />
+    <Content Include="Content\Images\LITTLE OLD LADY.pdf" />
+    <Content Include="Content\Images\LITTLE ON THE LONELY SIDE, A.pdf" />
+    <Content Include="Content\Images\LITTLE WHITE LIES.pdf" />
+    <Content Include="Content\Images\LONESOME AND SORRY.pdf" />
+    <Content Include="Content\Images\LOOKING FOR A BOY.pdf" />
+    <Content Include="Content\Images\LOUISE.pdf" />
+    <Content Include="Content\Images\LOUISIANA HAYRIDE.pdf" />
+    <Content Include="Content\Images\LOVE %28YOUR SPELL IS EVERYWHERE%29.pdf" />
+    <Content Include="Content\Images\LOVE FOR SALE.pdf" />
+    <Content Include="Content\Images\LOVE IN BLOOM.pdf" />
+    <Content Include="Content\Images\LOVE IS HERE TO STAY.pdf" />
+    <Content Include="Content\Images\LOVE IS THE SWEETEST THING.pdf" />
+    <Content Include="Content\Images\LOVE LETTERS.pdf" />
+    <Content Include="Content\Images\LOVE WALKED IN.pdf" />
+    <Content Include="Content\Images\LOVELINESS OF YOU, THE.pdf" />
+    <Content Include="Content\Images\LOVELY TO LOOK AT.pdf" />
+    <Content Include="Content\Images\LOVER COME BACK TO ME.pdf" />
+    <Content Include="Content\Images\LOVER MAN.pdf" />
+    <Content Include="Content\Images\LUCKY DAY.pdf" />
+    <Content Include="Content\Images\LUCKY IN LOVE.pdf" />
+    <Content Include="Content\Images\MAD ABOUT THE BOY.pdf" />
+    <Content Include="Content\Images\MAKE BELIEVE BALL ROOM.pdf" />
+    <Content Include="Content\Images\MAN I LOVE, THE.pdf" />
+    <Content Include="Content\Images\MARY LOU.pdf" />
+    <Content Include="Content\Images\ME AND MY SHADOW.pdf" />
+    <Content Include="Content\Images\MEMORIES OF YOU.pdf" />
+    <Content Include="Content\Images\MISS YOU.pdf" />
+    <Content Include="Content\Images\MOANIN%27 LOW.pdf" />
+    <Content Include="Content\Images\monkey.jpg" />
+    <Content Include="Content\Images\MOOD INDIGO.pdf" />
+    <Content Include="Content\Images\MOON OVER MIAMI.pdf" />
+    <Content Include="Content\Images\MOONGLOW.pdf" />
+    <Content Include="Content\Images\MOONLIGHT AND SHADOWS.pdf" />
+    <Content Include="Content\Images\MOONLIGHT COCKTAIL.pdf" />
+    <Content Include="Content\Images\MOONLIGHT ON THE GANGES.pdf" />
+    <Content Include="Content\Images\MORE AND MORE.pdf" />
+    <Content Include="Content\Images\MORE THAN YOU KNOW.pdf" />
+    <Content Include="Content\Images\MOUNTAIN GREENERY.pdf" />
+    <Content Include="Content\Images\MUSIC GOES %27ROUND AND AROUND, THE.pdf" />
+    <Content Include="Content\Images\MUSIC, MAESTRO, PLEASE!.pdf" />
+    <Content Include="Content\Images\MY DARLING.pdf" />
+    <Content Include="Content\Images\MY FUTURE JUST PASSED.pdf" />
+    <Content Include="Content\Images\MY HEART BELONGS TO DADDY.pdf" />
+    <Content Include="Content\Images\MY HEART STOOD STILL.pdf" />
+    <Content Include="Content\Images\MY IDEAL.pdf" />
+    <Content Include="Content\Images\MY MOTHER%27S KISS.pdf" />
+    <Content Include="Content\Images\MY PRAYER.pdf" />
+    <Content Include="Content\Images\MY REVERIE.pdf" />
+    <Content Include="Content\Images\MY ROMANCE.pdf" />
+    <Content Include="Content\Images\MY SILENT LOVE.pdf" />
+    <Content Include="Content\Images\MY SIN.pdf" />
+    <Content Include="Content\Images\MY SONG.pdf" />
+    <Content Include="Content\Images\NATURE BOY.pdf" />
+    <Content Include="Content\Images\NEAR YOU.pdf" />
+    <Content Include="Content\Images\NIGHT AND DAY.pdf" />
+    <Content Include="Content\Images\NIGHT IS YOUNG AND YOU%27RE SO BEAUTIFUL, THE.pdf" />
+    <Content Include="Content\Images\OBJECT OF MY AFFECTION, THE.pdf" />
+    <Content Include="Content\Images\OL%27 MAN RIVER.pdf" />
+    <Content Include="Content\Images\OLD DEVIL MOON.pdf" />
+    <Content Include="Content\Images\ONCE IN AWHILE.pdf" />
+    <Content Include="Content\Images\ONE ALONE.pdf" />
+    <Content Include="Content\Images\ONE SONG.pdf" />
+    <Content Include="Content\Images\ONLY A ROSE.pdf" />
+    <Content Include="Content\Images\OUT OF NOWHERE.pdf" />
+    <Content Include="Content\Images\OVER THE RAINBOW.pdf" />
+    <Content Include="Content\Images\P.S. I LOVE YOU.pdf" />
+    <Content Include="Content\Images\PARIS IN THE SPRING.pdf" />
+    <Content Include="Content\Images\PASSING BY.pdf" />
+    <Content Include="Content\Images\PEG O%27 MY HEART.pdf" />
+    <Content Include="Content\Images\PENNIES FROM HEAVEN.pdf" />
+    <Content Include="Content\Images\PENTHOUSE SERENADE.pdf" />
+    <Content Include="Content\Images\PEOPLE WILL SAY WE%27RE IN LOVE.pdf" />
+    <Content Include="Content\Images\PERSIAN RUG.pdf" />
+    <Content Include="Content\Images\PLEASE.pdf" />
+    <Content Include="Content\Images\POOR BUTTERFLY.pdf" />
+    <Content Include="Content\Images\PRECIOUS LITTLE THING CALLED LOVE, A.pdf" />
+    <Content Include="Content\Images\PRETTY BABY.pdf" />
+    <Content Include="Content\Images\PRISONER OF LOVE.pdf" />
+    <Content Include="Content\Images\PUT YOUR ARMS AROUND ME, HONEY.pdf" />
+    <Content Include="Content\Images\RAIN.pdf" />
+    <Content Include="Content\Images\REMEMBER ME.pdf" />
+    <Content Include="Content\Images\RIGHT AS THE RAIN.pdf" />
+    <Content Include="Content\Images\RIO RITA053.pdf" />
+    <Content Include="Content\Images\RO RO ROLLIN%27 ALONG.pdf" />
+    <Content Include="Content\Images\ROOM WITH A VIEW, A.pdf" />
+    <Content Include="Content\Images\ROSALIE.pdf" />
+    <Content Include="Content\Images\ROSE MARIE.pdf" />
+    <Content Include="Content\Images\ROSE OF THE RIO GRANDE.pdf" />
+    <Content Include="Content\Images\S%27POSIN%27.pdf" />
+    <Content Include="Content\Images\SANTA CLAUS IS COMIN%27 TO TOWN.pdf" />
+    <Content Include="Content\Images\SAYS MY HEART.pdf" />
+    <Content Include="Content\Images\SENTIMENTAL JOURNEY.pdf" />
+    <Content Include="Content\Images\SEPTEMBER SONG.pdf" />
+    <Content Include="Content\Images\SEPTMEBER IN THE RAIN.pdf" />
+    <Content Include="Content\Images\SERENADE IN BLUE.pdf" />
+    <Content Include="Content\Images\SERENADE IN THE NIGHT.pdf" />
+    <Content Include="Content\Images\SHE%27S FUNNY THAT WAY.pdf" />
+    <Content Include="Content\Images\SHINE ON HARVEST MOON.pdf" />
+    <Content Include="Content\Images\SHOW ME THE WAY TO GO HOME.pdf" />
+    <Content Include="Content\Images\SHUFFLE OFF TO BUFFALO.pdf" />
+    <Content Include="Content\Images\SIDE BY SIDE.pdf" />
+    <Content Include="Content\Images\SIGH BY NIGHT.pdf" />
+    <Content Include="Content\Images\SING SOMETHING SIMPLE.pdf" />
+    <Content Include="Content\Images\SINGIN%27 IN THE RAIN.pdf" />
+    <Content Include="Content\Images\SKYLARK.pdf" />
+    <Content Include="Content\Images\SMILE WILL GO A LONG LONG WAY, A.pdf" />
+    <Content Include="Content\Images\SMILE, DARN YA, SMILE.pdf" />
+    <Content Include="Content\Images\SMOKE GETS IN YOUR EYES.pdf" />
+    <Content Include="Content\Images\SMOKE RINGS.pdf" />
+    <Content Include="Content\Images\SNUGGLED ON YOUR SHOULDER.pdf" />
+    <Content Include="Content\Images\SO BEATS MY HEART FOR YOU.pdf" />
+    <Content Include="Content\Images\SO FAR.pdf" />
+    <Content Include="Content\Images\SO IN LOVE.pdf" />
+    <Content Include="Content\Images\SO MANY MEMORIES.pdf" />
+    <Content Include="Content\Images\SOLITUDE.pdf" />
+    <Content Include="Content\Images\SOME ENCHANTED EVENING.pdf" />
+    <Content Include="Content\Images\SOME OTHER TIME.pdf" />
+    <Content Include="Content\Images\SOMEBODY LOVES ME.pdf" />
+    <Content Include="Content\Images\SOMEDAY %28YOU%27LL WANT ME TO WANT YOU%29.pdf" />
+    <Content Include="Content\Images\SOMEONE TO WATCH OVER ME.pdf" />
+    <Content Include="Content\Images\SOMETHING TO REMEMBER YOU BY.pdf" />
+    <Content Include="Content\Images\SONG IS YOU, THE.pdf" />
+    <Content Include="Content\Images\SONG OF THE VAGABONDS.pdf" />
+    <Content Include="Content\Images\SOON.pdf" />
+    <Content Include="Content\Images\SOUTH OF THE BORDER %28DOWN MEXICO WAY%29.pdf" />
+    <Content Include="Content\Images\SPEAK LOW.pdf" />
+    <Content Include="Content\Images\SPRING WILL BE A LITTLE LATE THIS YEAR.pdf" />
+    <Content Include="Content\Images\STANDARD FOXTROTS.pdf" />
+    <Content Include="Content\Images\STAR DUST.pdf" />
+    <Content Include="Content\Images\STARS FELL ON ALABAMA.pdf" />
+    <Content Include="Content\Images\STAY AS SWEET AS YOU ARE.pdf" />
+    <Content Include="Content\Images\STORMY WEATHER.pdf" />
+    <Content Include="Content\Images\STRANGE MUSIC.pdf" />
+    <Content Include="Content\Images\STUMBLING.pdf" />
+    <Content Include="Content\Images\SUMMER NIGHT.pdf" />
+    <Content Include="Content\Images\SUMMERTIME.pdf" />
+    <Content Include="Content\Images\SUNNY DISPOSISH.pdf" />
+    <Content Include="Content\Images\SUNNY SIDE UP.pdf" />
+    <Content Include="Content\Images\SUNRISE SERENADE.pdf" />
+    <Content Include="Content\Images\SURRENDER.pdf" />
+    <Content Include="Content\Images\SURREY WITH THE FRINGE ON TOP, THE.pdf" />
+    <Content Include="Content\Images\SWEET LORRAINE.pdf" />
+    <Content Include="Content\Images\SWEETHEART OF ALL MY DREAMS.pdf" />
+    <Content Include="Content\Images\SWINGIN%27 DOWN THE LANE.pdf" />
+    <Content Include="Content\Images\SYMPHONY.pdf" />
+    <Content Include="Content\Images\TAKE ME IN YOUR ARMS.pdf" />
+    <Content Include="Content\Images\TANGERINE PARAMOUNT PICTURE THE FLEETS IN SLOWLY.pdf" />
+    <Content Include="Content\Images\THANKS FOR THE MEMORY.pdf" />
+    <Content Include="Content\Images\THANKS.pdf" />
+    <Content Include="Content\Images\THAT CERTAIN PARTY.pdf" />
+    <Content Include="Content\Images\THAT OLD BLACK MAGIC.pdf" />
+    <Content Include="Content\Images\THAT OLD FEELING.pdf" />
+    <Content Include="Content\Images\THAT%27S MY DESIRE.pdf" />
+    <Content Include="Content\Images\THAT%27S WHY DARKIES WERE BORN.pdf" />
+    <Content Include="Content\Images\THEN I%27LL BE HAPPY.pdf" />
+    <Content Include="Content\Images\THERE I DO.pdf" />
+    <Content Include="Content\Images\THERE IS NO GREATER LOVE.pdf" />
+    <Content Include="Content\Images\THERE MUST BE A WAY.pdf" />
+    <Content Include="Content\Images\THERE%27LL BE SOME CHANGES MADE.pdf" />
+    <Content Include="Content\Images\THERE%27S A RAINBOW %27ROUND MY SHOULDER.pdf" />
+    <Content Include="Content\Images\THERE%27S A SMALL HOTEL.pdf" />
+    <Content Include="Content\Images\THERE%27S YES YES IN YOUR EYES.pdf" />
+    <Content Include="Content\Images\THESE FOOLISH THINGS REMIND ME OF YOU.pdf" />
+    <Content Include="Content\Images\THEY GO WILD SIMPLY OVER ME.pdf" />
+    <Content Include="Content\Images\THINGS I LOVE, THE.pdf" />
+    <Content Include="Content\Images\THIS CAN%27T BE LOVE.pdf" />
+    <Content Include="Content\Images\THIS IS IT.pdf" />
+    <Content Include="Content\Images\THIS LOVE OF MINE.pdf" />
+    <Content Include="Content\Images\THOU SWELL.pdf" />
+    <Content Include="Content\Images\THROUGH %28HOW CAN YOU SAY WE%27RE THROUGH%29.pdf" />
+    <Content Include="Content\Images\TICKLE TOE, THE.pdf" />
+    <Content Include="Content\Images\TIP TOE THRU THE TULIPS WITH ME.pdf" />
+    <Content Include="Content\Images\TO EACH HIS OWN.pdf" />
+    <Content Include="Content\Images\TOO MARVELOUS FOR WORDS.pdf" />
+    <Content Include="Content\Images\TOOT TOOT TOOTSIE.pdf" />
+    <Content Include="Content\Images\TOUCH OF YOUR LIPS, THE.pdf" />
+    <Content Include="Content\Images\TRUE.pdf" />
+    <Content Include="Content\Images\TRY A LITTLE TENDERNESS.pdf" />
+    <Content Include="Content\Images\TWO LOVES HAVE I %28J%27AI DEUX AMOURS%29.pdf" />
+    <Content Include="Content\Images\TWO SLEEPY PEOPLE.pdf" />
+    <Content Include="Content\Images\UNDER A BLANKET OF BLUE.pdf" />
+    <Content Include="Content\Images\UNTIL THE REAL THING COMES ALONG.pdf" />
+    <Content Include="Content\Images\VARSITY DRAG, THE.pdf" />
+    <Content Include="Content\Images\VERY THOUGHT OF YOU, THE.pdf" />
+    <Content Include="Content\Images\WAY YOU LOOK TONIGHT, THE.pdf" />
+    <Content Include="Content\Images\WE COULD MAKE SUCH BEAUTIFUL MUSIC.pdf" />
+    <Content Include="Content\Images\WE JUST COULDN%27T SAY GOODBYE.pdf" />
+    <Content Include="Content\Images\WHAT IS THERE TO SAY.pdf" />
+    <Content Include="Content\Images\WHEN DAY IS DONE.pdf" />
+    <Content Include="Content\Images\WHEN HEARTS ARE YOUNG.pdf" />
+    <Content Include="Content\Images\WHEN IT%27S SLEEPY TIME DOWN SOUTH.pdf" />
+    <Content Include="Content\Images\WHEN MY BABY SMILES AT ME.pdf" />
+    <Content Include="Content\Images\WHEN MY DREAM BOAT COMES HOME.pdf" />
+    <Content Include="Content\Images\WHEN YOU WERE SWEET SIXTEEN.pdf" />
+    <Content Include="Content\Images\WHEN YOU WISH UPON A STAR.pdf" />
+    <Content Include="Content\Images\WHERE OR WHEN.pdf" />
+    <Content Include="Content\Images\WHO CARES.pdf" />
+    <Content Include="Content\Images\WISHING.pdf" />
+    <Content Include="Content\Images\WITH EVERY BREATH I TAKE.pdf" />
+    <Content Include="Content\Images\WITH THE WIND AND THE RAIN IN YOUR HAIR.pdf" />
+    <Content Include="Content\Images\WRAP YOUR TROUBLES IN DREAMS.pdf" />
+    <Content Include="Content\Images\YOU GO TO MY HEAD.pdf" />
+    <Content Include="Content\Images\YOU LEAVE ME BREATHLESS.pdf" />
+    <Content Include="Content\Images\YOU MAKE ME LOVE YOU.pdf" />
+    <Content Include="Content\Images\YOU%27LL NEVER KNOW.pdf" />
+    <Content Include="Content\Images\YOU%27RE MINE, YOU.pdf" />
+    <Content Include="Content\Images\YOU%27RE THE ONE I CARE FOR.pdf" />
+    <Content Include="Content\Images\YOUNGER THAN SPRINGTIME.pdf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\angular.min.js.map">
+      <DependentUpon>angular.min.js</DependentUpon>
+    </Content>
+    <Content Include="Content\Images\35597.1.pdf" />
+    <Content Include="Content\Images\35603.1.pdf" />
+    <Content Include="Content\Images\35925.1.pdf" />
+    <Content Include="Content\Images\36089.1.pdf" />
+    <Content Include="Content\Images\43119.1.pdf" />
+    <Content Include="Content\Images\46124.1.pdf" />
+    <Content Include="Content\Images\46583.1.pdf" />
+    <Content Include="Content\Images\50975.1.pdf" />
+    <Content Include="Content\Images\51165.1.pdf" />
+    <Content Include="Content\Images\51913.1.pdf" />
+    <Content Include="Content\Images\51913.2.pdf" />
+    <Content Include="Content\Images\52364.1.pdf" />
+    <Content Include="Content\Images\52504.1.pdf" />
+    <Content Include="Content\Images\52574.1.pdf" />
+    <Content Include="Content\Images\52707.1.pdf" />
+    <Content Include="Content\Images\53310.1.pdf" />
+    <Content Include="Content\Images\53620.1.pdf" />
+    <Content Include="Content\Images\53671.1.pdf" />
+    <Content Include="Content\Images\53718.1.pdf" />
+    <Content Include="Content\Images\53820.1.pdf" />
+    <Content Include="Content\Images\56662.1.pdf" />
+    <Content Include="Content\Images\58192.1.pdf" />
+    <Content Include="Content\Images\64843.1.pdf" />
+    <Content Include="Content\Images\64937.1.pdf" />
+    <Content Include="Content\Images\65225.1.pdf" />
+    <Content Include="Content\Images\65225.2.pdf" />
+    <Content Include="Content\Images\66580.1.pdf" />
+    <Content Include="Content\Images\69265.1.pdf" />
+    <Content Include="Content\Images\72859.1.pdf" />
+    <Content Include="Content\Images\73455.1.pdf" />
+    <Content Include="Content\Images\76669.1.pdf" />
+    <Content Include="Content\Images\79245.1.pdf" />
+    <Content Include="Content\Images\80988.1.pdf" />
+    <Content Include="Content\Images\83487.1.pdf" />
+    <Content Include="Content\Images\86690.1.pdf" />
+    <Content Include="Content\Images\88411.1.pdf" />
+    <Content Include="Content\Images\93290.1.pdf" />
+    <Content Include="Content\Images\93478.1.pdf" />
+    <Content Include="Content\Images\93839.1.pdf" />
+    <Content Include="Content\Images\93840.1.pdf" />
+    <Content Include="Content\Images\93847.1.pdf" />
+    <Content Include="Content\Images\93864.1.pdf" />
+    <Content Include="Content\Images\93870.1.pdf" />
+    <Content Include="Content\Images\94355.1.pdf" />
+    <Content Include="Content\Images\94356.1.pdf" />
+    <Content Include="Content\Images\94357.1.pdf" />
+    <Content Include="Content\Images\94358.1.pdf" />
+    <Content Include="Content\Images\94359.1.pdf" />
+    <Content Include="Content\Images\94361.1.pdf" />
+    <Content Include="Content\Images\94362.1.pdf" />
+    <Content Include="Content\Images\94363.1.pdf" />
+    <Content Include="Content\Images\94364.1.pdf" />
+    <Content Include="Content\Images\94365.1.pdf" />
+    <Content Include="Content\Images\94366.1.pdf" />
+    <Content Include="Content\Images\94367.1.pdf" />
+    <Content Include="Content\Images\94368.1.pdf" />
+    <Content Include="Content\Images\94369.1.pdf" />
+    <Content Include="Content\Images\94370.1.pdf" />
+    <Content Include="Content\Images\94372.1.pdf" />
+    <Content Include="Content\Images\94374.1.pdf" />
+    <Content Include="Content\Images\94375.1.pdf" />
+    <Content Include="Content\Images\94376.1.pdf" />
+    <Content Include="Content\Images\94378.1.pdf" />
+    <Content Include="Content\Images\94379.1.pdf" />
+    <Content Include="Content\Images\94381.1.pdf" />
+    <Content Include="Content\Images\94382.1.pdf" />
+    <Content Include="Content\Images\94383.1.pdf" />
+    <Content Include="Content\Images\94385.1.pdf" />
+    <Content Include="Content\Images\94386.1.pdf" />
+    <Content Include="Content\Images\94387.1.pdf" />
+    <Content Include="Content\Images\94388.1.pdf" />
+    <Content Include="Content\Images\94389.1.pdf" />
+    <Content Include="Content\Images\94390.1.pdf" />
+    <Content Include="Content\Images\94391.1.pdf" />
+    <Content Include="Content\Images\94392.1.pdf" />
+    <Content Include="Content\Images\94393.1.pdf" />
+    <Content Include="Content\Images\94582.1.pdf" />
+    <Content Include="Content\Images\94592.1.pdf" />
+    <Content Include="Content\Images\94593.1.pdf" />
+    <Content Include="Content\Images\94594.1.pdf" />
+    <Content Include="Content\Images\94596.1.pdf" />
+    <Content Include="Content\Images\94597.1.pdf" />
+    <Content Include="Content\Images\94603.1.pdf" />
+    <Content Include="Content\Images\94605.1.pdf" />
+    <Content Include="Content\Images\94607.1.pdf" />
+    <Content Include="Content\Images\94610.1.pdf" />
+    <Content Include="Content\Images\94614.1.pdf" />
+    <Content Include="Content\Images\94619.1.pdf" />
+    <Content Include="Content\Images\94621.1.pdf" />
+    <Content Include="Content\Images\94623.1.pdf" />
+    <Content Include="Content\Images\94625.1.pdf" />
+    <Content Include="Content\Images\94628.1.pdf" />
+    <Content Include="Content\Images\94631.1.pdf" />
+    <Content Include="Content\Images\94634.1.pdf" />
+    <Content Include="Content\Images\94635.1.pdf" />
+    <Content Include="Content\Images\94636.1.pdf" />
+    <Content Include="Content\Images\94637.1.pdf" />
+    <Content Include="Content\Images\94638.1.pdf" />
+    <Content Include="Content\Images\94640.1.pdf" />
+    <Content Include="Content\Images\94667.1.pdf" />
+    <Content Include="Content\Images\94676.1.pdf" />
+    <Content Include="Content\Images\94681.1.pdf" />
+    <Content Include="Content\Images\94684.1.pdf" />
+    <Content Include="Content\Images\94686.1.pdf" />
+    <Content Include="Content\Images\94690.1.pdf" />
+    <Content Include="Content\Images\94695.1.pdf" />
+    <Content Include="Content\Images\95024.1.pdf" />
+    <Content Include="Content\Images\95025.1.pdf" />
+    <Content Include="Content\Images\95352.1.pdf" />
+    <Content Include="Content\Images\95353.1.pdf" />
+    <Content Include="Content\Images\95366.1.pdf" />
+    <Content Include="Content\Images\97039.1.pdf" />
+    <Content Include="Content\Images\97061.1.pdf" />
+    <Content Include="Content\Images\97062.1.pdf" />
+    <Content Include="Content\Images\97063.1.pdf" />
+    <Content Include="Content\Images\97064.1.pdf" />
+    <Content Include="Content\Images\97065.1.pdf" />
+    <Content Include="Content\Images\97066.1.pdf" />
+    <Content Include="Content\Images\97067.1.pdf" />
+    <Content Include="Content\Images\97068.1.pdf" />
+    <Content Include="Content\Images\97069.1.pdf" />
+    <Content Include="Content\Images\97070.1.pdf" />
+    <Content Include="Content\Images\97071.1.pdf" />
+    <Content Include="Content\Images\97072.1.pdf" />
+    <Content Include="Content\Images\97073.1.pdf" />
+    <Content Include="Content\Images\97074.1.pdf" />
+    <Content Include="Content\Images\97191.1.pdf" />
+    <Content Include="Content\Images\97820.1.pdf" />
+    <Content Include="Content\Images\97822.1.pdf" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CatalogWeb.pubxml" />
+    <None Include="Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\jquery-1.9.0.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App\app.js" />
+    <Content Include="App\controllers.js" />
+    <Content Include="Index.html" />
+    <Content Include="Scripts\angular-ui-router.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.stickytableheaders.js" />
+    <Content Include="Style\CSS\bootstrap.css" />
+    <Content Include="Style\CSS\common.css" />
+    <Content Include="Style\CSS\style.css" />
+    <Content Include="View\Error.html" />
+    <Content Include="View\Home.html" />
+    <Content Include="View\78Browse.html" />
+    <Content Include="View\TracksBrowse.html" />
+    <Content Include="View\PrpBrowse.html" />
+    <Content Include="View\PianorolBrowse.html" />
+    <Content Include="View\SilentBrowse.html" />
+    <Content Include="View\SolosBrowse.html" />
+    <Content Include="View\SheetMusBrowse.html" />
+    <Content Include="View\OrchestrationBrowse.html" />
+    <Content Include="View\OrchestrationsFilter.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Style\Font\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>44300</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:44300/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,295 @@
+﻿
+<style>
+    #scroll-wrap {
+        max-height: 50vh;
+        overflow-y: auto;
+    }
+</style>
+
+
+
+<div class="row">
+    <table class="table table-hover table-condensed tableDarkHeader">
+        <thead>
+            <tr>
+                <th colspan="10">
+                    <div class="input-group col-lg-6">
+                        <input ng-model="SearchBox" ng-model-options='{ debounce: 750 }' autofocus ng-change="ChangedSearchBoxSearch()" type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button ng-click="FilterModal()" class="btn btn-info" type="button">Filter</button>
+                            <button ng-show="FilterSet==true" ng-click="ClearFilterAndRequery()" class="btn btn-info" type="button">Clear Filter</button>
+                        </span>
+
+                        <span>Rows: {{total_rows}}</span>
+
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="10">
+                    <div class="input-group col-lg-6">
+                        <span>
+                            Sort by:
+                            <select ng-options="option for option in sortFields" ng-model="SORT_BY" ng-change="SortChange()"></select>
+                        </span>
+
+                        <span class="input-group-btn" ng-show="(row_start-20)>0" ">
+                            <button ng-click="PreviousPage()" class="btn btn-info" type="button">
+                            < </i></button>
+                        </span>
+
+
+                        <span class="input-group-btn" ng-show="(row_start+20)<total_rows" ">
+                            <button ng-click="NextPage()" class="btn btn-info" type="button">
+                            > </i></button>
+                        </span>
+
+                        <span>Showing {{row_start}}-{{row_display_end}}</span>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Performer1</th>
+                <th>Performer2</th>
+                <th>Company</th>
+                <th>Catalog #</th>
+                <th>Composer1</th>
+                <th>ProdTitle</th>
+                <th>Lyricist1</th>
+                <th>Publisher</th>
+                <th>Composer2</th>
+                <th>Composer3</th>
+                <th>Composer4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="C78 in C78">
+                <td>
+                    <a href ng-click="DetailModal(C78.ID_78)">{{C78.TITLE}}</a>
+                </td>
+                <td>
+                    <div ng-show="C78.PICTURE">
+                        <a target="_blank" ng-href="/Content/Images/{{C78.PICTURE}}"><i class="fa fa-music"></i></a>
+                    </div>
+                <td>
+                    {{C78.PERFORMERS1}}
+                </td>
+                <td>
+                    {{C78.PERFORMERS2}}
+                </td>
+                <td>
+                    {{C78.COMPANY}}
+                </td>
+                <td>
+                    {{C78.CATNUM}}
+                </td>
+                <td>
+                    {{C78.COMPOSERS1}}
+                </td>
+                <td>
+                    {{C78.PRODTITLE}}
+                </td>
+                <td>
+                    {{C78.LYRICISTS1}}
+                </td>
+                <td>
+                    {{C78.PUBLISHER}}
+                </td>
+                <td>
+                    {{C78.COMPOSERS2}}
+                </td>
+                <td>
+                    {{C78.COMPOSERS3}}
+                </td>
+                <td>
+                    {{C78.COMPOSERS4}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("table").stickyTableHeaders;
+    });
+</script>
+
+<!--FILTER MODAL-->
+<div class="modal fade bs-example-modal-sm" id="FilterModal" tabindex="-1" role="dialog" aria-labelledby="FilterModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="FilterModalLabel">Filter criteria</h4>
+                <button type="button" class="btn btn-default col-md-offset-1" ng-click="GetTitleBySubstring()" data-dismiss="modal">Go</i></button>
+                <button type="button" class="btn btn-default col-md-offset-2" ng-click="ClearFilter()">Clear values</i></button>
+                <div class="modal-body">
+                    <div id="scroll-wrap">
+                        <div class="form-group">
+                            <label for="Title">Title contains:</label>
+                            <input type="text" name="Title" id="Title" class="form-control" ng-model="filterValues.TITLE" ng-change="FilterChange()" ng-required="false" ng-minlength="1" ng-maxlength="100">
+
+                            <label for="arr">Catalog # contains:</label>
+                            <input type="text" name="catnum" id="catnum" class="form-control" ng-model="filterValues.CATNUM" ng-change="FilterChange()" ng-required="false" ng-minlength="1" ng-maxlength="100">
+
+                            <label for="complyr">Composer/Lyricist contains:</label>
+                            <input type="text" name="complyr" id="complyr" class="form-control" ng-model="filterValues.COMP_LYR" ng-change="FilterChange()" ng-required="false" ng-minlength="1" ng-maxlength="100">
+
+                            <label for="complyr">Performer contains:</label>
+                            <input type="text" name="complyr" id="complyr" class="form-control" ng-model="filterValues.PERFORMER" ng-change="FilterChange()" ng-required="false" ng-minlength="1" ng-maxlength="100">
+
+                            <label for="pub">Publisher contains:</label>
+                            <input type="text" name="pub" id="pub" class="form-control" ng-model="filterValues.PUBLISHER" ng-change="FilterChange()" ng-required="false" ng-minlength="1" ng-maxlength="100">
+
+                            <label for="arrtype">Arrangement Type contains:</label>
+                            <input type="text" name="arrtype" id="arrtype" class="form-control" ng-model="filterValues.ARRANGTYPE" ng-change="FilterChange()" ng-required="false" ng-minlength="1" ng-maxlength="100">
+
+                            <label for="prodtype">Production Type contains:</label>
+                            <input type="text" name="prodtype" id="prodtype" class="form-control" ng-model="filterValues.PRODTYPE" ng-required="false" ng-change="FilterChange()" ng-minlength="1" ng-maxlength="100">
+
+                            <label for="prodtitle">Production Title contains:</label>
+                            <input type="text" name="prodtitle" id="prodtitle" class="form-control" ng-model="filterValues.PRODTITLE" ng-required="false" ng-change="FilterChange()" ng-minlength="1" ng-maxlength="100">
+
+                            <label for="id">Notes contain:</label>
+                            <input type="text" name="notes" id="notes" class="form-control" ng-model="filterValues.NOTES" ng-required="false" ng-change="FilterChange()" ng-minlength="1" ng-maxlength="100">
+
+
+                            <label for="tityear">Company contains:</label>
+                            <input type="text" name="tityear" id="tityear" class="form-control" ng-model="filterValues.COMPANY" ng-required="false" ng-change="FilterChange()" ng-minlength="1" ng-maxlength="100">
+
+                            <label for="arryear">Recording day contains:</label>
+                            <input type="text" name="recday" id="recday" class="form-control" ng-model="filterValues.RECDAY" ng-required="false" ng-change="FilterChange()" ng-minlength="1" ng-maxlength="100">
+
+                            <label for="arryear">Recording month contains:</label>
+                            <input type="text" name="recmonth" id="recmonth" class="form-control" ng-model="filterValues.RECMONTH" ng-required="false" ng-change="FilterChange()" ng-minlength="1" ng-maxlength="100">
+
+                            <label for="arryear">Recording year contains:</label>
+                            <input type="text" name="recyear" id="recyear" class="form-control" ng-model="filterValues.RECYEAR" ng-required="false" ng-change="FilterChange()" ng-minlength="1" ng-maxlength="100">
+
+                            <label for="key">Location contains:</label>
+                            <input type="text" name="Location" id="Location" class="form-control" ng-model="filterValues.LOCATION" ng-required="false" ng-change="FilterChange()" ng-minlength="1" ng-maxlength="100">
+
+            
+                            
+                            <label for="picture">Fakebook contains:</label>
+                            <input type="text" name="picture" id="picture" class="form-control" ng-model="filterValues.PICTURE" ng-required="false" ng-change="FilterChange()" ng-minlength="1" ng-maxlength="100">
+                        </div>
+
+                    </div>
+                </div>
+                <button type="button" class="btn btn-default col-md-offset-1" ng-click="GetTitleBySubstring()" data-dismiss="modal">Go</i></button>
+                <button type="button" class="btn btn-default col-md-offset-2" ng-click="ClearFilter()">Clear values</i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--DETAIL MODAL-->
+<div class="modal fade bs-example-modal-sm" id="DetailModal" tabindex="-1" role="dialog" aria-labelledby="DetailModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Back"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="DetailModalLabel">{{detailData.TITLE}}</h4>
+                <button type="button" class="btn btn-default col-md-offset-1" data-dismiss="modal">Back</i></button>
+                <div class="modal-body">
+                    <div id="scroll-wrap">
+
+                        <div class="text-primary">Composers:</div>
+                        <div ng-show="detailData.COMPOSERS1">{{detailData.COMPOSERS1}}</div>
+                        <div ng-show="detailData.COMPOSERS2">{{detailData.COMPOSERS2}}</div>
+                        <div ng-show="detailData.COMPOSERS3">{{detailData.COMPOSERS3}}</div>
+                        <div ng-show="detailData.COMPOSERS4">{{detailData.COMPOSERS4}}</div>
+                        <br />
+
+                        <div class="text-primary">Performers:</div>
+                        <div ng-show="detailData.PERFORMERS1">{{detailData.PERFORMERS1}}</div>
+                        <div ng-show="detailData.PERFORMERS2">{{detailData.PERFORMERS2}}</div>
+                        <div ng-show="detailData.PERFORMERS3">{{detailData.PERFORMERS3}}</div>
+                        <div ng-show="detailData.PERFORMERS4">{{detailData.PERFORMERS4}}</div>
+                        <br />
+
+
+                        <div class="text-primary">Lyricists:</div>
+                        <div ng-show="detailData.LYRICISTS1">{{detailData.LYRICISTS1}}</div>
+                        <div ng-show="detailData.LYRICISTS2">{{detailData.LYRICISTS2}}</div>
+                        <div ng-show="detailData.LYRICISTS3">{{detailData.LYRICISTS3}}</div>
+                        <div ng-show="detailData.LYRICISTS4">{{detailData.LYRICISTS4}}</div>
+                        <br />
+
+                        <div class="text-primary">Publisher:</div>
+                        <div ng-show="detailData.PUBLISHER">{{detailData.PUBLISHER}}</div>
+                        <br />
+
+                        <div class="text-primary">Arrangement Type:</div>
+                        <div ng-show="detailData.ARRANGTYPE">{{detailData.ARRANGTYPE}}</div>
+                        <br />
+
+                        <div class="text-primary">Production Source:</div>
+                        <div ng-show="detailData.PRODTYPE">{{detailData.PRODTYPE}}</div>
+                        <br />
+
+                        <div class="text-primary">Production Title:</div>
+                        <div ng-show="detailData.PRODTITLE">{{detailData.PRODTITLE}}</div>
+                        <br />
+
+                        <div class="text-primary">Company:</div>
+                        <div ng-show="detailData.COMPANY">{{detailData.COMPANY}}</div>
+                        <br />
+
+                        <div class="text-primary">Catalog Number:</div>
+                        <div ng-show="detailData.CATNUM">{{detailData.CATNUM}}</div>
+                        <br />
+
+
+                        <div class="text-primary">Matrix prefix:</div>
+                        <div ng-show="detailData.MATRIX_PREFIX">{{detailData.MATRIX_PREFIX}}</div>
+                        <br />
+
+                        <div class="text-primary">Matrix number:</div>
+                        <div ng-show="detailData.MATRIX_NUM">{{detailData.MATRIX_NUM}}</div>
+                        <br />
+
+                        <div class="text-primary">Matrix suffix:</div>
+                        <div ng-show="detailData.MATRIX_SUFFIX">{{detailData.MATRIX_SUFFIX}}</div>
+                        <br />
+
+
+                        <div class="text-primary">Recording day:</div>
+                        <div ng-show="detailData.RecDay">{{detailData.RecDay}}</div>
+                        <br />
+
+                        <div class="text-primary">Recording month:</div>
+                        <div ng-show="detailData.RecMonth">{{detailData.RecMonth}}</div>
+                        <br />
+
+                        <div class="text-primary">Recording year:</div>
+                        <div ng-show="detailData.RecYear">{{detailData.RecYear}}</div>
+                        <br />
+
+
+                        <div class="text-primary">Location:</div>
+                        <div ng-show="detailData.LOCATION">{{detailData.LOCATION}}</div>
+                        <br />
+
+
+                        <div class="text-primary">Notes:</div>
+                        <div ng-show="detailData.NOTES1">{{detailData.NOTES1}}</div>
+                        <div ng-show="detailData.NOTES2">{{detailData.NOTES2}}</div>
+                        <br />
+
+                        <div class="text-primary">Youtube:</div>
+                        <div ng-show="detailData.YOUTUBE">
+                            <a href="{{detailData.YOUTUBE}}" target="_blank">Youtube Link</a>
+                        </div>
+
+                    </div>
+                </div>
+                <button type="button" class="btn btn-default col-md-offset-1" data-dismiss="modal">Back</i></button>
+            </div>
+        </div>
+    </div>
+</div>
