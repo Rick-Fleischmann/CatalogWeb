@@ -31,6 +31,7 @@ string RECMONTH,
 string RECYEAR,
 string LOCATION,
 string PICTURE,
+string YOUTUBE,
 string SEARCHBOX,
 string ROW_START,
 string SORT_BY	
@@ -40,7 +41,7 @@ string SORT_BY
 
    
             var model = _db.Database
-                .SqlQuery<C78>("Get78 @fTITLE,	@fCATNUM,	@fCOMP_LYR,	@fPERFORMER, @fPUBLISHER,	@fPRODTYPE,	@fPRODTITLE, @fARRANGTYPE,	@fNOTES, @fCOMPANY,	@fRECDAY, @fRECMONTH, @fRECYEAR, @fLOCATION, @fPICTURE, @fSEARCHBOX, @fROW_START,	@fSORT_BY ",
+                .SqlQuery<C78>("Get78 @fTITLE,	@fCATNUM,	@fCOMP_LYR,	@fPERFORMER, @fPUBLISHER,	@fPRODTYPE,	@fPRODTITLE, @fARRANGTYPE,	@fNOTES, @fCOMPANY,	@fRECDAY, @fRECMONTH, @fRECYEAR, @fLOCATION, @fPICTURE, @fYOUTUBE, @fSEARCHBOX, @fROW_START,	@fSORT_BY ",
                 new SqlParameter("@fTITLE",TITLE),
                 new SqlParameter("@fCATNUM",CATNUM),
                 new SqlParameter("@fCOMP_LYR",COMP_LYR),
@@ -56,6 +57,7 @@ string SORT_BY
                 new SqlParameter("@fRECYEAR", RECYEAR),
                 new SqlParameter("@fLOCATION", LOCATION),
                 new SqlParameter("@fPICTURE", PICTURE),
+				new SqlParameter("@fYOUTUBE", YOUTUBE),
                new SqlParameter("@fSEARCHBOX", SEARCHBOX),
                 new SqlParameter("@fROW_START",ROW_START),
                 new SqlParameter("@fSORT_BY",SORT_BY)

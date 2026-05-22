@@ -67,6 +67,7 @@
             RECYEAR: '',
             LOCATION: '',
             PICTURE: '',
+			YOUTUBE: '',
             SEARCHBOX: ''
         };
 

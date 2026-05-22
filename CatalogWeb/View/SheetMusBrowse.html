@@ -52,7 +52,7 @@
                 </tr>
                 <tr>
                     <th>Title</th>
-                    <th>Scan</th>
+                    <th>Image</th>
                     <th>Catalog #</th>
                     <th>Composer1</th>
                     <th>Key</th>
@@ -75,8 +75,7 @@
                     </td>
                     <td>
                         <div ng-show="SheetMus.PICTURE">
-                            <a target="_blank" ng-href="/Content/Images/{{SheetMus.ID_SHEETMUS}}.1.PDF"><i class="fa fa-music"></i></a>
-                        </div>
+                            <a target="_blank" ng-href="/Content/LargeSheetMusic/{{SheetMus.PICTURE}}"><i class="fa fa-music"></i></a>
                     <td>
                     <td>
                         {{SheetMus.CATNUM}}
@@ -226,6 +225,8 @@
                 <br />
             </div>
 
+
+
             <button ng-click="HideDetail()" class="btn btn-default" style="margin-top: 10px;">&larr; Back</button>
         </div>
     </div>
@@ -286,8 +287,11 @@
                             <label for="pubcatnum">Public catalog number contains:</label>
                             <input type="text" name="pubcatnum" id="pubcatnum" class="form-control" ng-model="filterValues.PCN" ng-change="FilterChange()" ng-required="false" ng-minlength="1" ng-maxlength="100">
 
+                            <label for="pubcatnum">Picture contains:</label>
+                            <input type="text" name="picture" id="picture" class="form-control" ng-model="filterValues.PICTURE" ng-change="FilterChange()" ng-required="false" ng-minlength="1" ng-maxlength="100">
+
                             <!--<label for="picture">Fakebook contains:</label>
-                            <input type="text" name="picture" id="picture" class="form-control" ng-model="filterValues.PICTURE" ng-required="false" ng-minlength="1" ng-maxlength="100">-->
+    <input type="text" name="picture" id="picture" class="form-control" ng-model="filterValues.PICTURE" ng-required="false" ng-minlength="1" ng-maxlength="100">-->
 
                             <br />
 
