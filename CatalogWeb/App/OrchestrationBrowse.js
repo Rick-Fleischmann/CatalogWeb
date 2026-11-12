@@ -16,7 +16,7 @@
             } else {
                 // 2. We are in Production! 
                 // Use the actual domain where your API is hosted
-                root = "http://vince.zapto.org/CatalogWebAPI/"
+                root = "http://vince.zapto.org/CatalogWebAPI"
             }
 
             var configUrl = root + '/api/config';
