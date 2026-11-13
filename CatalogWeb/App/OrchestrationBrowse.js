@@ -3,6 +3,7 @@
 
     appVar.controller("OrchestrationBrowseController", ["$scope", "$http", function ($scope, $http) {
 
+
         // --- DYNAMIC CONFIGURATION LOGIC ---
         var apiBaseUrl = "";
 
